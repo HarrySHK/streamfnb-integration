@@ -1,0 +1,1145 @@
+<!-- Main navigation container -->
+<nav
+  class="relative flex items-center justify-between w-full py-1 text-white bg-transparent flex-nowrap hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-0"
+  data-te-navbar-ref>
+  <div class="flex flex-wrap items-center justify-between w-full px-3">
+    <div class="ml-2">
+   <img src="https://streamvid.gavencreative.com/wp-content/uploads/2023/02/logo.svg" class="w-[190px] lg:ml-12 mt-2">
+    </div>
+
+    <input type="checkbox" id="drawer-left" class="drawer-toggle" />
+
+<label for="drawer-left" class="block px-2 text-white bg-transparent border-0 small_mob1:mr-[40px] btn hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"><span class="[&>svg]:w-7">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    class="h-7 w-7">
+    <path
+      fill-rule="evenodd"
+      d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+      clip-rule="evenodd" />
+  </svg>
+</span></label>
+<label class="overlay" for="drawer-left"></label>
+
+
+<div   class="visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:ml-12 lg:!flex lg:basis-auto">
+
+      <!-- Left links -->
+      <ul
+        class="flex flex-col pl-0 mr-auto font-bold list-style-none lg:mt-2 lg:flex-row"
+        data-te-navbar-nav-ref>
+        <!-- Home link -->
+
+
+
+        <div class="flex flex-wrap items-center justify-between w-full ">
+            <!-- Dropdown -->
+            <div class="relative " data-te-dropdown-ref>
+              <!-- <a
+                class="flex hover:text-[#7b61ff]  px-6 pb-2 text-sm  text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#"
+                type="button"
+                id="dropdownMenuButton2"
+                data-te-dropdown-toggle-ref
+                aria-expanded="false">
+                Home
+                <span class="w-2 ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </a>
+              <ul
+                class="backdrop-blur-md absolute z-[1000] mt-1  w-56 text-left m-0 bg-[#0f101acc] hidden min-w-max list-none overflow-hidden rounded-lg border-2 border-[#7b61ff] bg-clip-padding  text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                aria-labelledby="dropdownMenuButton2"
+                data-te-dropdown-menu-ref>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4  text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]  text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    ><p class="duration-300 hover:ml-3">Home</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    ><p class="duration-300 hover:ml-3">Home 2</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    ><p class="duration-300 hover:ml-3">Home 3</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                   class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    ><p class="duration-300 hover:ml-3">Home 4</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600  hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    ><p class="duration-300 hover:ml-3">Home 5</p></a
+                  >
+                </li>
+              </ul> -->
+              <div class="flex items-center hover:text-purple-500 px-6 pb-2 text-sm  text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400">
+                <app-home-components></app-home-components>
+               </div>
+
+
+            </div>
+          </div>
+
+
+
+
+          <div class="flex flex-wrap items-center justify-between w-full ">
+            <!-- Dropdown -->
+            <div class="relative  lg:ml-[-22px] " data-te-dropdown-ref>
+              <a
+                 class="popover-trigger flex items-center hover:text-purple-500  pb-2 text-sm text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#"
+                type="button"
+                id="dropdownMenuButton2"
+                data-te-dropdown-toggle-ref
+                aria-expanded="false">
+                Features
+                <span class="w-2 ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </a>
+              <!-- bg-[#00031ccc] -->
+              <div class="border-2  backdrop-blur-md  rounded-lg popover-content  mt-6 popover-bottom-right ml-[-210px] bg-white w-[1250px] h-[297px]" tabindex="0">
+                <div class="popover-arrow ml-[200px] bg-white h-8 w-8"></div>
+                <div class="flex gap-2 ">
+                  <div class=" border-[#292c41] bg-white mt-6"><h1 class="text-sm font-bold text-black  pt-[5px] pl-[13px]">POPULAR</h1>
+                    <div class=" text-sm font-light text-black  pt-[20px] pl-[13px] ">
+                      <div class="flex flex-col w-40 space-y-3">
+                        <a href="" class="hover:text-[#7b61ff] ">Featured</a>
+                        <a href="" class="hover:text-[#7b61ff]">Most Popular</a>
+                        <a href="" class="hover:text-[#7b61ff]">New Releases</a>
+                        <a href="" class="hover:text-[#7b61ff]">Recommend</a>
+                        <a href="" class="hover:text-[#7b61ff]">Trending Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-gray-200 h-[286px] pl-[90px] pt-[26px]"><h1 class="text-sm font-bold text-black">GENRES</h1>
+                    <div class="flex w-[260px] gap-10 pt-[20px] text-sm font-light text-black">
+                      <div class="flex flex-col space-y-3">
+                        <a href="" class="hover:text-[#7b61ff]">Romance</a>
+                        <a href="" class="hover:text-[#7b61ff]">Drama</a>
+                        <a href="" class="hover:text-[#7b61ff]">Family</a>
+                        <a href="" class="hover:text-[#7b61ff]">Comedy</a>
+                        <a href="" class="hover:text-[#7b61ff]">Actions</a>
+                        <a href="" class="hover:text-[#7b61ff]">Adventure</a>
+                      </div>
+                      <div class="flex flex-col space-y-3 text-black">
+                        <a href="" class="hover:text-[#7b61ff]">Horror</a>
+                        <a href="" class="hover:text-[#7b61ff]">Anime</a>
+                        <a href="" class="hover:text-[#7b61ff]">Thriller</a>
+                        <a href="" class="hover:text-[#7b61ff]">History</a>
+                        <a href="" class="hover:text-[#7b61ff]">Sci-Fi</a>
+                      </div>
+                    </div></div>
+                  <div class="bg-white w-[200px]"><h1 class="text-sm font-bold text-black pt-[25px]">COLLECTIONS</h1>
+                    <div class="text-sm font-light text-black pt-[22px]">
+                      <div class="flex flex-col w-40 space-y-4">
+                        <a href="" class="hover:text-[#7b61ff]">Actor's Spotlight</a>
+                        <a href="" class="hover:text-[#7b61ff]">Holiday Movies</a>
+                        <a href="" class="hover:text-[#7b61ff]">New Trailers</a>
+                        <a href="" class="hover:text-[#7b61ff]">Weekly Watchlist</a>
+                        <a href="" class="hover:text-[#7b61ff]">TV Networks</a>
+                      </div>
+                    </div></div>
+                  <div class="bg-gray-200 w-[485px]"><h1 class="text-sm font-bold text-black pt-[23px] pl-[40px]">MOVIES OF THE DAY</h1>
+
+                    <!-- FEATURES SLIDER -->
+                    <div class="w-full h-[230px] mt-[7px] bg-white ">
+
+
+<app-nav-slider></app-nav-slider>
+
+                   <!-- <p class="text-black">Slider Check</p>  -->
+
+
+
+
+
+                    </div>
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="flex flex-wrap items-center justify-between w-full ">
+            <!-- Dropdown -->
+           <div class="relative " data-te-dropdown-ref>
+              <!-- <a
+                class="flex items-center hover:text-purple-500 px-6 pb-2 text-sm  text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                href="#"
+                type="button"
+                id="dropdownMenuButton2"
+                data-te-dropdown-toggle-ref
+                aria-expanded="false">
+                Pages
+                <span class="w-2 ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </a>
+               <ul
+                class="backdrop-blur-md mt-1 absolute z-[1000] w-56 text-left m-0 bg-[#00031ccc] hidden min-w-max list-none overflow-hidden rounded-lg border-2 border-[#7b61ff] bg-clip-padding  text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                aria-labelledby="dropdownMenuButton2"
+                data-te-dropdown-menu-ref>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >
+                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">TV Shows</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div>
+                    </a
+                  >
+                </li>
+
+
+
+
+
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Movies</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Videos</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600 border-b border-dotted border-[#292c41] hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Person</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600  hover:text-[#7b61ff] border-b border-dotted border-[#292c41]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Advertising</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600  hover:text-[#7b61ff] border-b border-dotted border-[#292c41]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Subtitles</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600  hover:text-[#7b61ff] border-b border-dotted border-[#292c41]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Shop</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600  hover:text-[#7b61ff] border-b border-dotted border-[#292c41]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">About Us</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600  hover:text-[#7b61ff] border-b border-dotted border-[#292c41]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Contact</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full px-4 py-4 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600  hover:text-[#7b61ff]"
+                    href="#"
+                    data-te-dropdown-item-ref
+                    >                    <div class="flex justify-between">
+                      <div>
+                    <p class="duration-300 hover:ml-3">Membership Levels</p>
+                  </div>
+                  <div>
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </span>
+                  </div>
+                  </div></a
+                  >
+                </li>
+              </ul>   -->
+
+
+
+              <div class="flex items-center hover:text-purple-500 px-6 pb-2 text-sm  text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400">
+               <app-page-component></app-page-component>
+               </div>
+
+
+            </div>
+          </div>
+
+
+
+          <div class="flex flex-wrap items-center justify-between w-full ">
+            <!-- Dropdown -->
+            <div class="relative lg:ml-[-34px]" data-te-dropdown-ref>
+
+              <div class="flex items-center hover:text-purple-500  pb-2 text-sm  text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400  [&.active]:text-black/90 dark:[&.active]:text-neutral-400">
+               <app-blog-component></app-blog-component>
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+
+
+      </ul>
+      <div class= "w-[410px] lg:mr-[20px]   lg:mt-1  ">
+        <div class="relative flex flex-wrap items-stretch w-full h-full ">
+
+            <form>
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search" class="block w-full p-2 pl-12 text-sm border-2 border-gray-500 rounded-lg rounded-lg-gray-900 roun bg-black/50 focus:ring-blue-500 focus:border-blue-500 dark:bg-black/50 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
+
+                </div>
+            </form>
+
+
+
+            <div>
+
+                 <img src="https://streamvid.gavencreative.com/wp-content/uploads/2023/02/earch.svg" class="w-8 h-8 lg:mt-1 lg:ml-8">
+
+
+                 </div>
+
+
+                  <!-- Dropdown -->
+                  <div class="relative font-bold lg:ml-2 lg:mt-2 " data-te-dropdown-ref>
+                    <a
+                      class="flex items-center hover:text-purple-500 px-6 pb-2  text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                      href="#"
+                      type="button"
+                      id="dropdownMenuButton2"
+                      data-te-dropdown-toggle-ref
+                      aria-expanded="false">
+                      EN
+                      <span class="w-2 ml-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="w-5 h-5">
+                          <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                        </svg>
+                      </span>
+                    </a>
+                    <ul
+                      class="absolute z-[1000] float-left  m-0 pl-8 text-center hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-black/50 bg-clip-padding  text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                      aria-labelledby="dropdownMenuButton2"
+                      data-te-dropdown-menu-ref>
+                      <li>
+                        <a
+                          class="block w-full px-4 py-2 text-sm font-normal text-center bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                          href="#"
+                          data-te-dropdown-item-ref
+                          >FR</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          class="block w-full px-4 py-2 text-sm font-normal bg-transparent whitespace-nowrap text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                          href="#"
+                          data-te-dropdown-item-ref
+                          >JP</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+      <!--profile icon -->
+
+<article>
+      <!-- <a href="model-1" for="modal-1" class="cursor-pointer">
+      <img src="../../../assets/images/profile.png" for="modal-1" class="w-12 h-12 mt-[-4px] ml-2 cursor-pointer">
+</a> -->
+
+   <label class="" for="modal-1">
+    <img src="../../../assets/images/profile.png"  class="w-12 h-12 mt-[-4px] ml-2 cursor-pointer">
+   </label>
+
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal">
+    <label class=" modal-overlay" for="modal-1"></label>
+    <div class="flex flex-col w-full gap-5 bg-white modal-content p-7">
+      <label for="modal-1" class="absolute text-black text-h_1 hover:bg-black hover:text-white btn btn-sm btn-circle btn-ghost right-2 top-2">✕</label>
+      <div class="flex flex-col gap-2 ">
+        <h2 class="text-2xl font-semibold text-center">  <img src="https://streamvid.gavencreative.com/wp-content/uploads/2023/02/logo_sin.svg" class="w-10 h-10 ml-auto mr-auto"></h2>
+        <p class="max-w-xs mx-auto mt-2 font-bold text-black text-base2">Welcome Back!</p>
+      </div>
+
+      <section>
+        <div class="form-group">
+          <div class="form-field">
+
+            <button type="button " class="gap-5 bg-blue-600 btn">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 48 48" enablebackground="new 0 0 48 48" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#1877F2" d="M24,4c-11.046,0-20,8.954-20,20c0,11.047,8.954,20,20,20c11.047,0,20-8.953,20-20C44,12.954,35.047,4,24,4z"></path>
+                  <path fill="#FFF" d="M31,15h-2c-2.761,0-5,2.239-5,5v2H22v4h2v13h7V26h6l1-6h-7v-3c0-1.657,1.343-3,3-3h2V15z"></path>
+              </svg>
+              <span>Sign up with Facebook</span>
+          </button>
+
+            <!-- <button class="text-center text-white"></button> -->
+            <button type="button" class="gap-8 btn bg-gray-5">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 48 48" enablebackground="new 0 0 48 48" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657        C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+                <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36        c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+                <path
+                  fill="#1976D2"
+                  d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+                    c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                ></path>
+              </svg>
+              <span>Sign up with google</span>
+            </button>
+
+            <!-- <div class="my-6 text-md divider text-content2">or</div> -->
+
+            <div class="flex items-center my-6 text-md">
+              <div class="flex-1 h-0.5 bg-gray-200 mr-2"></div>
+              <span class="text-gray-400 text-md">or</span>
+              <div class="flex-1 h-0.5 bg-gray-200 ml-2 "></div>
+          </div>
+
+            <!-- <label class="form-label">Email address</label> -->
+            <input placeholder="Email or username" type="email" class="max-w-full p-6 bg-white border-gray-200 rounded-md input placeholder:text-gray-400 text-black/80 placeholder:tracking-wide" />
+
+          </div>
+
+          <div class="form-field">
+            <!-- <label class="form-label">
+              <span>Password</span>
+            </label> -->
+            <div class="form-control">
+              <input placeholder="Password" type="password" class="max-w-full p-6 bg-white border-gray-200 rounded-md input placeholder:text-gray-400 text-black/80 placeholder:tracking-wide" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <div class="justify-between form-control">
+              <div>
+                <input type="checkbox" class="bg-gray-400 border-none checkbox checked:bg-black" />
+                <a href="#" class="ml-2 text-gray-400">Remember me</a>
+              </div>
+              <label class="form-label">
+                <a class="text-sm text-purple-400 link link-underline-hover link-primary">Forgot your password?</a>
+              </label>
+            </div>
+          </div>
+
+          <div class="pt-5 form-field">
+            <div class="justify-between form-control">
+              <button type="button" class="w-full p-4 btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="flex items-center justify-center gap-2 mt-4 text-xs dark:text-gray-5 sm:px-6">
+          <span class="text-sm">Not Registered yet?</span>
+          <a rel="noopener noreferrer" href="#" class="text-sm text-purple-400 link link-primary">Register</a>
+        </div>
+        <div class="mt-6 ml-auto mr-auto">
+          <p class="text-sm text-gray-400">By registering, you agree to Streamvid's Terms of Use and Privacy Policy.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+  <div class="h-16 w-42 lg:-ml-6 lg1:-ml-6">
+
+    <button class="px-12 py-4 mt-1  bg-gradient-to-tl from-[#8454d1] via-[#6c52ee]  to-[#619bff] rounded-xl font-sans text-md tracking-wider text-center font-extrabold   text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/50  focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:px-6 lg1:px-12">
+     Subscribe
+    </button>
+  </div>
+    </div>
+
+
+
+
+    <!-- IPAD AND MOBILE VIEW -->
+
+    <div class="drawer bg-[#00031c] duration-500 overflow-x-hidden" data-te-perfect-scrollbar-init
+    data-te-suppress-scroll-x="true">
+      <div class="flex flex-col h-full pt-10 drawer-content">
+        <!-- <label for="drawer-left" class="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</label> -->
+        <div>
+          <!-- <h2 class="text-xl font-medium">Create your account</h2> -->
+          <div>
+          <img src="https://streamvid.gavencreative.com/wp-content/uploads/2023/02/logo.svg" class="w-[210px] ">
+        </div>
+        <form class="mt-4 mb-4 w-[280px] mx-auto">
+          <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+          <div class="relative">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                  </svg>
+              </div>
+
+              <input type="search" id="default-search" class="popover-trigger block w-full p-2 pl-12 text-base border-2 border-[#292c41] rounded-lg rounded-lg-gray-900 bg-[#00031c] focus:ring-purple-500 focus:border-purple-500   placeholder-white text-white " placeholder="Search Mockups, Logos..." required>
+              <div class="bg-[#292c41] popover-content popover-bottom-center" tabindex="0">
+                <div class="p-4 text-sm text-gray-300">Please enter keywords</div>
+              </div>
+          </div>
+      </form>
+          <div>
+            <!-- <nav class="p-4 rounded-md menu bg-backgroundSecondary"> -->
+              <section class="menu-section">
+                <ul class="menu-items ">
+                  <li>
+                    <input type="checkbox" id="menu-1" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+                    <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-1">
+                      <span class="text-white">Home</span>
+                      <span class="menu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </span>
+                    </label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                    <div class="menu-item-collapse">
+                      <div class="min-h-0">
+                        <label class="text-white menu-item text-car hover:bg-transparent">Home</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <label class="text-white menu-item text-car hover:bg-transparent">Home 2</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <label class="text-white menu-item text-car hover:bg-transparent">Home 3</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <label class="text-white menu-item text-car hover:bg-transparent">Home 4</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <label class="text-white menu-item text-car hover:bg-transparent">Home 5</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="menu-2" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+                    <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-2">
+                      <span class="text-white">Features</span>
+                      <span class="menu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </span>
+                    </label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                    <div class="menu-item-collapse">
+                      <div class="min-h-0">
+                        <label class="text-white menu-item text-car hover:bg-transparent">
+                          <div class="flex flex-col p-4 space-y-5">
+                            <div class="border-b-2 border-dotted border-[#292c41]"><h1 class="text-sm font-bold text-[#7b61ff]">POPULAR</h1>
+                              <div class="pb-5 mt-4 text-sm font-light text-white">
+                                <div class="flex flex-col w-40 space-y-2">
+                                  <a href="" class="hover:text-[#7b61ff]">Featured</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Most Popular</a>
+                                  <a href="" class="hover:text-[#7b61ff]">New Releases</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Recommend</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Trending Now</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="border-[#292c41] border-b-2 border-dotted"><h1 class="text-sm font-bold text-[#7b61ff]">GENRES</h1>
+                              <div class="flex w-48 gap-10 pb-5 mt-4 text-sm font-light text-white">
+                                <div class="flex flex-col space-y-2">
+                                  <a href="" class="hover:text-[#7b61ff]">Romance</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Drama</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Family</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Comedy</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Actions</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Adventure</a>
+                                </div>
+                                <div class="flex flex-col space-y-2">
+                                  <a href="" class="hover:text-[#7b61ff]">Horror</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Anime</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Thriller</a>
+                                  <a href="" class="hover:text-[#7b61ff]">History</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Sci-Fi</a>
+                                </div>
+                              </div></div>
+                            <div class="border-[#292c41] border-b-2 border-dotted"><h1 class="text-sm font-bold text-[#7b61ff]">COLLECTIONS</h1>
+                              <div class="pb-5 mt-4 text-sm font-light text-white">
+                                <div class="flex flex-col w-40 space-y-2">
+                                  <a href="" class="hover:text-[#7b61ff]">Actor's Spotlight</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Holiday Movies</a>
+                                  <a href="" class="hover:text-[#7b61ff]">New Trailers</a>
+                                  <a href="" class="hover:text-[#7b61ff]">Weekly Watchlist</a>
+                                  <a href="" class="hover:text-[#7b61ff]">TV Networks</a>
+                                </div>
+                              </div></div>
+                            <div class=""><h1 class="text-sm font-bold text-[#7b61ff]">MOVIES OF THE DAY</h1>
+
+                              <!-- FEATURES SLIDER -->
+
+
+                              <!-- <div class="w-full h-80 "> -->
+
+
+                                <!-- cards -->
+<div class="-ml-14">
+                                <div class="flex items-center justify-center w-full h-full px-4 py-1 sm:py-8 ">
+                                  <div class="relative flex items-center justify-center w-full">
+                                    <button aria-label="slide backward"
+                                      class="absolute left-0 z-30 ml-4 cursor-pointer focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                                      (click)="goPrev('slider2')">
+                                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 1L1 7L7 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                    </button>
+                                    <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+                                      <div id="slider2"
+                                        class="flex items-center justify-start h-full transition duration-700 ease-out lg:gap-3 md2:gap-3 md:gap-2 sm:gap-2 tab:gap-[12px] cust:gap-2 gapp:gap-2 cus:gap-2 bigg_mob2:gap-2 big_mob1:gap-2 small_mob1:gap-2">
+
+
+                                        <div class="bg-transparent card card-image-cover" *ngFor="let trend of trending">
+                                          <!-- <img src="https://source.unsplash.com/random/300x200" alt="" /> -->
+                                          <a [routerLink]="['/trending', trend.Id]">
+
+                                            <video [src]="trend.Video" class="object-cover object-center" autoplay></video>
+                                          </a>
+                                          <div class="space-y-4">
+                                            <!-- <h2 class="text-white card-header">Maximizing Your Productivity at Work</h2>
+                                            <p class="text-gray-100 ">Are you looking to increase your productivity at work?</p> -->
+                                            <!-- Thubnail -->
+                                            <div class="flex flex-col maida lg:ml-[-7px] bg-transparent w-[210px] h-[72px] ">
+                                              <div class="flex flew-row lg:gap-2 md2:gap-2 md:gap-2 cust1:gap-2 sm:gap-2 tab:gap-2 cust:gap-2 gapp:gap-2 cus:gap-2 bigg_mob2:gap-2 big_mob1:gap-2 small_mob1:gap-2">
+                                                <div class="w-8 ml-1 bg-red-500 h-11">
+                                                  <img [src]="trend.profile1" class="w-full h-full" />
+
+                                                </div>
+
+                                                <div class="w-8 bg-red-500 h-11 ">
+
+                                                  <img [src]="trend.profile2" class="w-full h-full" />
+
+                                                </div>
+                                                <div class="w-8 bg-red-500 h-11 ">
+
+                                                  <img [src]="trend.profile3" class="w-full h-full" />
+
+                                                </div>
+
+                                                <div class="w-8 bg-red-500 h-11 ">
+
+                                                  <img [src]="trend.profile4" class="w-full h-full" />
+
+                                                </div>
+                                              </div>
+                                              <h2 class="ml-2 space-x-2 text-sm font-bold text-white lg:pt-3 lg:tracking-wide md2:pt-2 md:pt-3 cust1:pt-3 sm:pt-3 tab:pt-3 cust:pt-3 gapp:pt-3 cus:pt-3 bigg_mob2:pt-3 big_mob1:pt-3 small_mob1:pt-3">{{trend.title}}</h2>
+
+                                            </div>
+                                          </div>
+                                        </div>
+
+
+                                      </div>
+                                    </div>
+                                    <button aria-label="slide forward"
+                                      class="absolute left-0 z-30 ml-[280px] focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                                      (click)="goNext('slider2')">
+                                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+</div>
+
+                              <!-- </div> -->
+<!-- ================ -->
+                            </div>
+                          </div>
+                        </label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="menu-3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+                    <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-3">
+                      <span class="text-white">Pages</span>
+                      <span class="menu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </span>
+                    </label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                    <div class="menu-item-collapse">
+                      <div class="min-h-0">
+<!-- ========= -->
+<li>
+                            <input type="checkbox" id="menu-1s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+                            <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-1s3">
+                              <span class="ml-4 text-white">Tv Shows</span>
+                              <span class="menu-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                              </span>
+                            </label>
+        <div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                            <div class="menu-item-collapse">
+                              <div class="min-h-0">
+                                <label class="text-white menu-item text-car hover:bg-transparent">Tv Shows Style</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+<!-- ========= -->
+<li>
+  <input type="checkbox" id="menu-8s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+  <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-8s3">
+    <span class="ml-4 text-white">Tv Shows Single</span>
+    <span class="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+  </label>
+  <div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  <div class="menu-item-collapse">
+    <div class="min-h-0">
+      <label class="text-white menu-item text-car hover:bg-transparent">Tv Shows Single Ver 1</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+      <label class="text-white menu-item text-car hover:bg-transparent">Tv Shows Single Ver 2</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    </div>
+  </div>
+  </li>
+  <!-- ========= -->
+
+  <!-- ========= -->
+<li>
+  <input type="checkbox" id="menu-9s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+  <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-9s3">
+    <span class="ml-4 text-white">Episodes Single</span>
+    <span class="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+  </label>
+  <div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  <div class="menu-item-collapse">
+    <div class="min-h-0">
+      <label class="text-white menu-item text-car hover:bg-transparent">Episodes Single Ver 1</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+      <label class="text-white menu-item text-car hover:bg-transparent">Episodes Single Ver 2</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    </div>
+  </div>
+  </li>
+  <!-- ========= -->
+                              </div>
+                            </div>
+                          </li>
+<!-- ========= -->
+
+<!-- ========= -->
+<li>
+<input type="checkbox" id="menu-2s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+<label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-2s3">
+  <span class="ml-4 text-white">Movies</span>
+  <span class="menu-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+  </span>
+</label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+<div class="menu-item-collapse">
+  <div class="min-h-0">
+    <label class="text-white menu-item text-car hover:bg-transparent">Movies Style</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Movies Style 2</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Movies Style 3</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <!-- ========= -->
+<li>
+  <input type="checkbox" id="menu-10s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+  <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-10s3">
+    <span class="ml-4 text-white">Movies Single</span>
+    <span class="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+  </label>
+  <div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  <div class="menu-item-collapse">
+    <div class="min-h-0">
+      <label class="text-white menu-item text-car hover:bg-transparent">Movies Single Ver 1</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+      <label class="text-white menu-item text-car hover:bg-transparent">Movies Single Ver 2</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+      <label class="text-white menu-item text-car hover:bg-transparent">Movies Single Ver 3</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    </div>
+  </div>
+  </li>
+  <!-- ========= -->
+  </div>
+</div>
+</li>
+<!-- ========= -->
+
+<!-- ========= -->
+<li>
+<input type="checkbox" id="menu-3s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+<label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-3s3">
+  <span class="ml-4 text-white">Videos</span>
+  <span class="menu-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+  </span>
+</label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+<div class="menu-item-collapse">
+  <div class="min-h-0">
+    <label class="text-white menu-item text-car hover:bg-transparent">Videos Archive</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Videos Single Ver 1</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Videos Single Ver 2</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Videos Single Ver 3</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  </div>
+</div>
+</li>
+<!-- ========= -->
+
+<!-- ========= -->
+<li>
+<input type="checkbox" id="menu-4s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+<label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-4s3">
+  <span class="ml-4 text-white">Person</span>
+  <span class="menu-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+  </span>
+</label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+<div class="menu-item-collapse">
+  <div class="min-h-0">
+    <label class="text-white menu-item text-car hover:bg-transparent">Person Single</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  </div>
+</div>
+</li>
+<!-- ========= -->
+
+<!-- ========= -->
+<li>
+<input type="checkbox" id="menu-5s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+<label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-5s3">
+  <span class="ml-4 text-white">Advertising</span>
+  <span class="menu-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+  </span>
+</label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+<div class="menu-item-collapse">
+  <div class="min-h-0">
+    <label class="text-white menu-item text-car hover:bg-transparent">Preroll</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Midroll</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Postroll</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Pre Mid Postroll</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  </div>
+</div>
+</li>
+<!-- ========= -->
+
+                        <label class="text-white menu-item text-car hover:bg-transparent">Subtitles</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <!-- ========= -->
+                        <li>
+                        <input type="checkbox" id="menu-6s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+                        <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-6s3">
+                          <span class="ml-4 text-white">Shop</span>
+                          <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                          </span>
+                        </label>
+    <div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <div class="menu-item-collapse">
+                          <div class="min-h-0">
+                            <label class="text-white menu-item text-car hover:bg-transparent">Shop Sidebar</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                            <label class="text-white menu-item text-car hover:bg-transparent">Shop No Sidebar</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                          </div>
+                        </div>
+                      </li>
+<!-- ========= -->
+
+<!-- ========= -->
+<li>
+<input type="checkbox" id="menu-7s3" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+<label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-7s3">
+  <span class="ml-4 text-white">About Us</span>
+  <span class="menu-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+  </span>
+</label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+<div class="menu-item-collapse">
+  <div class="min-h-0">
+    <label class="text-white menu-item text-car hover:bg-transparent">FAQs</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Careers</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Privacy policy</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    <label class="text-white menu-item text-car hover:bg-transparent">Coming Soon</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  </div>
+</div>
+</li>
+<!-- ========= -->
+                        <label class="text-white menu-item text-car hover:bg-transparent">Contact</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <label class="text-white menu-item text-car hover:bg-transparent">Membership Levels</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="menu-4" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+                    <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-4">
+                      <span class="text-white">Blog</span>
+                      <span class="menu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </span>
+                    </label>
+<div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                    <div class="menu-item-collapse">
+                      <div class="min-h-0">
+                        <label class="text-white menu-item text-car hover:bg-transparent">Blog list</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <label class="text-white menu-item text-car hover:bg-transparent">Blog Grid 4 colums</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <label class="text-white menu-item text-car hover:bg-transparent">Blog Grid 3 colums</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+                        <!-- ========= -->
+<li>
+  <input type="checkbox" id="menu-1s4" class="menu-toggle [&:checked~.menu-item>.menu-icon]:-rotate-90" />
+  <label class="w-[325px] -ml-4 text-car menu-item justify-between hover:bg-transparent" for="menu-1s4">
+    <span class="ml-4 text-white">Single blog</span>
+    <span class="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-4 h-4 stroke-content3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+  </label>
+  <div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+  <div class="menu-item-collapse">
+    <div class="min-h-0">
+      <label class="text-white menu-item text-car hover:bg-transparent">Single blog sidebar</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+      <label class="text-white menu-item text-car hover:bg-transparent">Single blog full</label><div class="w-[285px] mx-auto h-[1px] bg-[#292c41]"></div>
+    </div>
+  </div>
+  </li>
+  <!-- ========= -->
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            <!-- </nav> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    </div>
+</nav>

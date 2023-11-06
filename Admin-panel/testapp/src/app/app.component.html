@@ -1,0 +1,183 @@
+<!-- <h1>ADMIN PANEL</h1>
+<br>
+<h2>Trending DATA</h2>
+<br>
+<div>
+  <input [(ngModel)]="newVideo.Video" placeholder="Video" />
+  <input [(ngModel)]="newVideo.title" placeholder="Title" />
+  <input [(ngModel)]="newVideo.description" placeholder="Discription" />
+  <input [(ngModel)]="newVideo.image" placeholder="image" />
+  <input [(ngModel)]="newVideo.profile1" placeholder="profile1" />
+  <input [(ngModel)]="newVideo.profile2" placeholder="profile2" />
+  <input [(ngModel)]="newVideo.profile3" placeholder="profile3" />
+  <input [(ngModel)]="newVideo.profile4" placeholder="profile4" />
+  <button (click)="addVideocat1()">Add Video</button>
+</div>
+
+<h4 *ngFor="let data of trending">
+  <b>=> {{data.Id}}: </b>
+  <input [(ngModel)]="data.Video" /><br/>
+  <input [(ngModel)]="data.title" /><br/>
+  <input [(ngModel)]="data.description" /><br/>
+  <input [(ngModel)]="data.image" /><br/>
+  <input [(ngModel)]="data.profile1" /><br/>
+  <input [(ngModel)]="data.profile2" /><br/>
+  <input [(ngModel)]="data.profile3" /><br/>
+  <input [(ngModel)]="data.profile4" /><br/>
+  <button (click)="updateVideocat1(data)">Update</button>
+  <button (click)="deleteVideocat1(data.Id)">Delete</button>
+</h4>
+
+<br>
+
+<h2>Recommended DATA</h2>
+<br>
+<div>
+  <input [(ngModel)]="newVideo1.Video" placeholder="Video" />
+  <input [(ngModel)]="newVideo1.title" placeholder="Title" />
+  <input [(ngModel)]="newVideo1.description" placeholder="Discription" />
+  <input [(ngModel)]="newVideo1.image" placeholder="image" />
+  <input [(ngModel)]="newVideo1.profile1" placeholder="profile1" />
+  <input [(ngModel)]="newVideo1.profile2" placeholder="profile2" />
+  <input [(ngModel)]="newVideo1.profile3" placeholder="profile3" />
+  <input [(ngModel)]="newVideo1.profile4" placeholder="profile4" />
+  <button (click)="addVideocat2()">Add Video</button>
+</div>
+
+<h4 *ngFor="let data of recommended">
+  <b>=> {{data.Id}}: </b>
+  <input [(ngModel)]="data.Video" /><br/>
+  <input [(ngModel)]="data.title" /><br/>
+  <input [(ngModel)]="data.description" /><br/>
+  <input [(ngModel)]="data.image" /><br/>
+  <input [(ngModel)]="data.profile1" /><br/>
+  <input [(ngModel)]="data.profile2" /><br/>
+  <input [(ngModel)]="data.profile3" /><br/>
+  <input [(ngModel)]="data.profile4" /><br/>
+  <button (click)="updateVideocat2(data)">Update</button>
+  <button (click)="deleteVideocat2(data.Id)">Delete</button>
+</h4> -->
+
+
+<!-- app.component.html -->
+
+<!-- <div class="bg-gray-100 min-h-screen p-6 overflow-x-hidden">
+  <h1 class="text-2xl font-bold mb-4 text-center">ADMIN PANEL</h1>
+
+
+  <h2 class="text-xl text-center">Select Category</h2>
+  <div class="flex justify-center">
+  <select [(ngModel)]="selectedCategory" (change)="refreshNotes()" class=" mt-2 mb-4 p-2 border">
+    <option value="trending">Trending</option>
+    <option value="recommended">Recommended</option>
+  </select>
+</div>
+
+
+  <h2 class="text-xl mb-2">{{selectedCategory | uppercase}} DATA</h2>
+  <div class="overflow-x-auto">
+  <div class="flex flex-col md:flex-row md:space-x-4 md:items-center mb-4">
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.Video : newVideo.Video" placeholder="Video" class="mt-2 p-2 border" />
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.title : newVideo.title" placeholder="Title" class="mt-2 p-2 border" />
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.description : newVideo.description" placeholder="Description" class="mt-2 p-2 border" />
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.image : newVideo.image" placeholder="Image" class="mt-2 p-2 border" />
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.profile1 : newVideo.profile1" placeholder="Profile1" class="mt-2 p-2 border" />
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.profile2 : newVideo.profile2" placeholder="Profile2" class="mt-2 p-2 border" />
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.profile3 : newVideo.profile3" placeholder="Profile3" class="mt-2 p-2 border" />
+    <input [(ngModel)]="selectedCategory === 'recommended' ? newVideo1.profile4 : newVideo.profile4" placeholder="Profile4" class="mt-2 p-2 border" />
+    <button (click)="addVideo()" class="mt-2 p-2  bg-blue-500 text-white rounded-md">Add Video</button>
+  </div>
+  </div>
+
+  <div class="overflow-x-auto">
+
+    <table class="w-full mb-4">
+      <tr>
+        <th class="p-2">ID</th>
+        <th class="p-2">Video</th>
+        <th class="p-2">Title</th>
+        <th class="p-2">Description</th>
+        <th class="p-2">Image</th>
+        <th class="p-2">Profile1</th>
+        <th class="p-2">Profile2</th>
+        <th class="p-2">Profile3</th>
+        <th class="p-2">Profile4</th>
+        <th class="py-2 px-12">Actions</th>
+      </tr>
+      <tr *ngFor="let video of selectedCategory === 'trending' ? trending : recommended">
+        <td class="p-2">{{ video.Id }}</td>
+        <td><input [(ngModel)]="video.Video" class="p-2 border" /></td>
+        <td><input [(ngModel)]="video.title" class="p-2 border" /></td>
+        <td><input [(ngModel)]="video.description" class="p-2 border" /></td>
+        <td><input [(ngModel)]="video.image" class="p-2 border" /></td>
+        <td><input [(ngModel)]="video.profile1" class="p-2 border" /></td>
+        <td><input [(ngModel)]="video.profile2" class="p-2 border" /></td>
+        <td><input [(ngModel)]="video.profile3" class="p-2 border" /></td>
+        <td><input [(ngModel)]="video.profile4" class="p-2 border" /></td>
+        <td class="space-x-2">
+          <button (click)="updateVideo(video)" class="bg-green-500 text-white p-2 rounded-md">Update</button>
+
+          <button (click)="deleteVideo(video.Id)" class="bg-red-500 text-white p-2 rounded-md">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div> -->
+
+<h1 class="text-4xl font-bold text-center my-4">ADMIN PANEL</h1>
+
+<h2 class="text-2xl my-2 text-purple-700 font-semibold">Trending DATA</h2>
+
+<div class="my-4 p-4 border border-gray-300 rounded-md">
+  <input [(ngModel)]="newVideo.Video" placeholder="Video" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo.title" placeholder="Title" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo.description" placeholder="Description" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo.image" placeholder="Image" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo.profile1" placeholder="Profile 1" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo.profile2" placeholder="Profile 2" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo.profile3" placeholder="Profile 3" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo.profile4" placeholder="Profile 4" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <button (click)="addVideocat1()" class="bg-blue-500 text-white p-2 rounded-md">Add Video</button>
+</div>
+
+<h4 *ngFor="let data of trending" class="my-4 p-4 border border-gray-300 rounded-md">
+  <b>=> {{data.Id}}: </b>
+  <input [(ngModel)]="data.Video" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.title" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.description" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.image" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile1" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile2" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile3" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile4" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <button (click)="updateVideocat1(data)" class="bg-blue-500 text-white p-2 rounded-md">Update</button>
+  <button (click)="deleteVideocat1(data.Id)" class="bg-red-500 text-white p-2 rounded-md ml-2">Delete</button>
+</h4>
+
+<h2 class="text-2xl my-2 text-purple-700 font-semibold">Recommended DATA</h2>
+
+<div class="my-4 p-4 border border-gray-300 rounded-md">
+  <input [(ngModel)]="newVideo1.Video" placeholder="Video" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo1.title" placeholder="Title" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo1.description" placeholder="Description" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo1.image" placeholder="Image" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo1.profile1" placeholder="Profile 1" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo1.profile2" placeholder="Profile 2" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo1.profile3" placeholder="Profile 3" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <input [(ngModel)]="newVideo1.profile4" placeholder="Profile 4" class="w-full p-2 border rounded-md shadow-sm mb-2" />
+  <button (click)="addVideocat2()" class="bg-blue-500 text-white p-2 rounded-md">Add Video</button>
+</div>
+
+<h4 *ngFor="let data of recommended" class="my-4 p-4 border border-gray-300 rounded-md">
+  <b>=> {{data.Id}}: </b>
+  <input [(ngModel)]="data.Video" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.title" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.description" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.image" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile1" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile2" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile3" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <input [(ngModel)]="data.profile4" class="w-full p-2 border rounded-md shadow-sm mb-2" /><br />
+  <button (click)="updateVideocat2(data)" class="bg-blue-500 text-white p-2 rounded-md">Update</button>
+  <button (click)="deleteVideocat2(data.Id)" class="bg-red-500 text-white p-2 rounded-md ml-2">Delete</button>
+</h4>

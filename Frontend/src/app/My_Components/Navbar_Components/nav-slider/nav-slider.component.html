@@ -1,0 +1,68 @@
+<div class="flex items-center justify-center w-full h-full px-4 py-24 bg-gray-200 sm:py-8">
+    <div class="relative flex items-center justify-center w-full mt-4 ">
+      <button aria-label="slide backward"
+        class="absolute left-0 z-30 cursor-pointer ml-[-6px] focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+        (click)="goPrev('slider11')">
+        <svg width="10" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1L1 7L7 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="w-full h-full overflow-x-hidden overflow-y-hidden">
+        <div id="slider11"
+        class="flex items-center justify-start pl-4 h-full transition duration-700 ease-out lg:gap-2 md2:gap-3 md:gap-2 sm:gap-2 tab:gap-[12px] cust:gap-2 gapp:gap-2 cus:gap-2 bigg_mob2:gap-2 big_mob1:gap-2 small_mob1:gap-2">
+
+          <div class="bg-transparent card card-image-cover" *ngFor="let trend of trending">
+            <!-- <img src="https://source.unsplash.com/random/300x200" alt="" /> -->
+            <a [routerLink]="['/trending', trend.Id]">
+              <video [src]="trend.Video" class="object-cover object-center w-full h-full " autoplay></video>
+            </a>
+            <div class="space-y-4 ">
+              <!-- <h2 class="text-white card-header">Maximizing Your Productivity at Work</h2>
+            <p class="text-gray-100 ">Are you looking to increase your productivity at work?</p> -->
+              <!-- Thubnail -->
+              <div class="flex flex-col maida lg:ml-[-7px] bg-transparent w-[210px] h-[72px] mr-4 ">
+                <!-- <div class="flex flew-row lg:gap-2 md2:gap-2 md:gap-2 cust1:gap-2 sm:gap-2 tab:gap-2 cust:gap-2 gapp:gap-2 cus:gap-2 bigg_mob2:gap-2 big_mob1:gap-2 small_mob1:gap-2">
+                  <div class="w-8 ml-1 bg-red-500 h-11">
+                    <img [src]="trend.profile1" class="w-full h-full" />
+
+                  </div>
+
+                  <div class="w-8 bg-red-500 h-11 ">
+
+                    <img [src]="trend.profile2" class="w-full h-full" />
+
+                  </div>
+                  <div class="w-8 bg-red-500 h-11 ">
+
+                    <img [src]="trend.profile3" class="w-full h-full" />
+
+                  </div>
+
+                  <div class="w-8 bg-red-500 h-11 ">
+
+                    <img [src]="trend.profile4" class="w-full h-full" />
+
+                  </div>
+                </div> -->
+                <h2 class="pl-4 space-x-2 text-sm font-bold text-black lg:pt-3 lg:tracking-wide md2:pt-2 md:pt-3 cust1:pt-3 sm:pt-3 tab:pt-3 cust:pt-3 gapp:pt-3 cus:pt-3 bigg_mob2:pt-3 big_mob1:pt-3 small_mob1:pt-3">{{trend.title}}</h2>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+      <button aria-label="slide forward"
+        class="relative z-30  ml-[12px] focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+        (click)="goNext('slider11')">
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L7 7L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
