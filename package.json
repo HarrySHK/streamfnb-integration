@@ -1,0 +1,13 @@
+{
+  "scripts": {
+ 
+    "start-frontend": "cd Frontend && ng serve --port 4200",
+    "start-backend": "cd Backend && dotnet run",
+    "start-admin-panel": "cd Admin-panel && ng serve --port 4300",
+    "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\" \"npm run start-admin-panel\" "
+
+  }, 
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
