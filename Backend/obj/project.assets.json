@@ -1474,19 +1474,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\OneDrive\\Desktop\\Combination\\Backend\\streamapi.csproj",
+      "projectUniqueName": "D:\\streamvid-final\\streamfnb-integration\\Backend\\streamapi.csproj",
       "projectName": "streamapi",
-      "projectPath": "C:\\Users\\PC\\OneDrive\\Desktop\\Combination\\Backend\\streamapi.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\OneDrive\\Desktop\\Combination\\Backend\\obj\\",
+      "projectPath": "D:\\streamvid-final\\streamfnb-integration\\Backend\\streamapi.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "D:\\streamvid-final\\streamfnb-integration\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
