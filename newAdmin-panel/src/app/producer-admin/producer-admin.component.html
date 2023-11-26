@@ -1,0 +1,112 @@
+<!-- producer.component.html -->
+
+<div class="flex">
+
+  <!-- Selected Producer Details and Update Form -->
+  <div class="w-2/3 p-4" *ngIf="selectedProducer">
+    <h2 class="text-xl font-bold mb-4">Selected Producer</h2>
+    <div class="mb-4">
+      <label class="block text-gray-600">ID:</label>
+      <span class="text-gray-800">{{ selectedProducer.id }}</span>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-600">Name:</label>
+      <input [(ngModel)]="selectedProducer.Name" class="mt-1 p-2 border rounded-md w-full" placeholder="Name" />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-600">Intro:</label>
+      <textarea [(ngModel)]="selectedProducer.Intro" class="mt-1 p-2 border rounded-md w-full" placeholder="Intro"></textarea>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-600">Thumbnail:</label>
+      <input [(ngModel)]="selectedProducer.Thumbnail" class="mt-1 p-2 border rounded-md w-full" placeholder="Thumbnail URL" />
+    </div>
+    <!-- Add similar input fields for other properties of the Producer model -->
+
+    <div class="flex space-x-2">
+      <button (click)="updateProducer()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Update Producer</button>
+      <button (click)="deleteProducer(selectedProducer.id)" class="bg-red-500 text-white px-4 py-2 rounded-md">Delete Producer</button>
+    </div>
+  </div>
+
+<!-- Input fields for new Producer -->
+<div class="w-full p-4">
+  <h2 class="text-xl font-bold mb-4">New Producer</h2>
+  <div class="mb-4">
+    <label class="block text-gray-600">Name:</label>
+    <input [(ngModel)]="newProducer.Name" class="mt-1 p-2 border rounded-md w-full" placeholder="Name" />
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-600">Intro:</label>
+    <textarea [(ngModel)]="newProducer.Intro" class="mt-1 p-2 border rounded-md w-full" placeholder="Intro"></textarea>
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-600">Thumbnail:</label>
+    <input [(ngModel)]="newProducer.Thumbnail" class="mt-1 p-2 border rounded-md w-full" placeholder="Thumbnail URL" />
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-600">Rating:</label>
+    <input [(ngModel)]="newProducer.Rating" class="mt-1 p-2 border rounded-md w-full" placeholder="Rating" />
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-600">Weblink:</label>
+    <input [(ngModel)]="newProducer.Weblink" class="mt-1 p-2 border rounded-md w-full" placeholder="Weblink" />
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-600">Handle:</label>
+    <input [(ngModel)]="newProducer.Handle" class="mt-1 p-2 border rounded-md w-full" placeholder="Handle" />
+  </div>
+  <!-- Add input fields for Type and ShowsList -->
+  <div class="mb-4">
+    <label class="block text-gray-600">Type (comma-separated):</label>
+    <input [(ngModel)]="newProducer.TypeInput" class="mt-1 p-2 border rounded-md w-full" placeholder="Type" />
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-600">ShowsList (comma-separated):</label>
+    <input [(ngModel)]="newProducer.ShowsListInput" class="mt-1 p-2 border rounded-md w-full" placeholder="ShowsList" />
+  </div>
+  <!-- Add similar input fields for other properties of the Producer model -->
+
+  <button (click)="createProducer()" class="bg-green-500 text-white px-4 py-2 rounded-md">Create Producer</button>
+</div>
+
+<!-- Display List of Producers in a Centered Table -->
+<div class="container mt-4">
+  <h2 class="text-xl font-bold mb-4">List of Producers</h2>
+
+  <table class="min-w-full border border-gray-300">
+    <thead>
+      <tr>
+        <th class="py-2 px-4 border-b text-center">Name</th>
+        <th class="py-2 px-4 border-b text-center">Intro</th>
+        <th class="py-2 px-4 border-b text-center">Thumbnail</th>
+        <th class="py-2 px-4 border-b text-center">Rating</th>
+        <th class="py-2 px-4 border-b text-center">Weblink</th>
+        <th class="py-2 px-4 border-b text-center">Handle</th>
+        <th class="py-2 px-4 border-b text-center">Type</th>
+        <th class="py-2 px-4 border-b text-center">ShowsList</th>
+        <!-- Add similar columns for other properties of the Producer model -->
+        <th class="py-2 px-4 border-b text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producer of producers">
+        <td class="py-2 px-4 border-b text-center">{{ producer.Name }}</td>
+        <td class="py-2 px-4 border-b text-center">{{ producer.Intro }}</td>
+        <td class="py-2 px-4 border-b text-center">{{ producer.Thumbnail }}</td>
+        <td class="py-2 px-4 border-b text-center">{{ producer.Rating }}</td>
+        <td class="py-2 px-4 border-b text-center">{{ producer.Weblink }}</td>
+        <td class="py-2 px-4 border-b text-center">{{ producer.Handle }}</td>
+        <td class="py-2 px-4 border-b text-center">{{ producer.Type.join(', ') }}</td>
+        <td class="py-2 px-4 border-b text-center">{{ producer.ShowsList.join(', ') }}</td>
+        <!-- Add similar columns for other properties of the Producer model -->
+        <td class="py-2 px-4 border-b text-center">
+          <button (click)="selectProducer(producer)" class="text-blue-500 hover:underline">Edit</button>
+          <button (click)="deleteProducer(producer.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

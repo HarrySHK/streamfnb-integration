@@ -1,4 +1,4 @@
-<div class="admin-panel max-w-xl mx-auto my-8 p-6 bg-white rounded shadow-md">
+<!-- <div class="admin-panel max-w-xl mx-auto my-8 p-6 bg-white rounded shadow-md">
   <h2 class="text-2xl font-semibold mb-4">Content Administration</h2>
 
   <form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
@@ -27,8 +27,6 @@
       <input type="text" id="category" formControlName="Category" class="mt-1 p-2 border rounded-md w-full">
     </div>
 
-    <!-- Add more input fields as needed -->
-
     <button type="submit" [disabled]="contentForm.invalid" class="bg-blue-500 text-white p-2 rounded-md">Save</button>
   </form>
 
@@ -38,4 +36,8 @@
       <button (click)="onDeleteContent(content.Id)" class="text-red-500">Delete</button>
     </li>
   </ul>
-</div>
+</div> -->
+
+<app-user-admin></app-user-admin>
+
+<!-- <app-producer-admin></app-producer-admin> -->

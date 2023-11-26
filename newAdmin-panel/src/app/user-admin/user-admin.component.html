@@ -1,0 +1,248 @@
+<!-- user-admin.component.html
+
+<div class="admin-panel max-w-xl mx-auto my-8 p-6 bg-white rounded shadow-md">
+  <h2 class="text-2xl font-semibold mb-4">User Administration</h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="mb-4">
+      <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
+      <input type="text" id="email" formControlName="Email" class="mt-1 p-2 border rounded-md w-full">
+    </div>
+
+    <div class="mb-4">
+      <label for="phone" class="block text-sm font-medium text-gray-600">Phone:</label>
+      <input type="text" id="phone" formControlName="Phone" class="mt-1 p-2 border rounded-md w-full">
+    </div>
+
+    <div class="mb-4">
+      <label for="name" class="block text-sm font-medium text-gray-600">Name:</label>
+      <input type="text" id="name" formControlName="Name" class="mt-1 p-2 border rounded-md w-full">
+    </div>
+
+
+    <button type="submit" [disabled]="userForm.invalid" class="bg-blue-500 text-white p-2 rounded-md">Save</button>
+  </form>
+
+  <ul class="mt-8">
+    <li *ngFor="let user of userList" class="flex justify-between items-center bg-gray-100 p-2 mb-2">
+      <span (click)="onSelectUser(user)" class="cursor-pointer">{{ user.Name }}</span>
+      <span (click)="onSelectUser(user)" class="cursor-pointer">{{ user.Email }}</span>
+      <span (click)="onSelectUser(user)" class="cursor-pointer">{{ user.Phone }}</span>
+      <button (click)="onDeleteUser(user.Id)" class="text-red-500">Delete</button>
+    </li>
+  </ul>
+</div> -->
+
+
+<!-- component -->
+<!-- This is an example component -->
+<div class='flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-600 '>
+  <div class='w-full max-w-xl px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
+      <h1 class="mb-10 text-4xl font-bold text-center">DATA MODEL TESTING </h1>
+
+      <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
+          <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide after:content-['+']">User</summary>
+<div class="">
+<h2 class="mt-2 text-lg font-bold text-center">Input Fields</h2>
+<hr class="h-px my-2 bg-gray-200 border-1.5">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="flex flex-col pt-2 pl-4 mb-2 space-y-4" >
+
+
+<label for="name" class="font-semibold tracking-wide">Name</label>
+<input id="name" formControlName="Name" type="text" class="w-3/4 p-2 border-2 border-gray-400 rounded-lg outline-none">
+
+<label for="email" class="font-semibold tracking-wide">Email</label>
+<input id="email" formControlName="Email" type="email" class="w-3/4 p-2 border-2 border-gray-400 rounded-lg outline-none">
+
+<label for="phone" class="font-semibold tracking-wide">Phone</label>
+<input id="phone" formControlName="Phone" type="text" class="w-3/4 p-2 border-2 border-gray-400 rounded-lg outline-none">
+
+<button type="submit" [disabled]="userForm.invalid" class="w-3/4 p-2 mt-8 ml-10 font-bold tracking-wider text-white rounded-full bg-neutral-700">Save</button>
+</form>
+
+</div>
+      </details>
+      <h3 class="text-xl text-red-700 font-bold">User Data View:</h3>
+      <table class="mt-4 w-full -ml-4 mb-6">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="py-2 px-4">Name</th>
+            <th class="py-2 px-4">Email</th>
+            <th class="py-2 px-4">Phone</th>
+            <th class="py-2 px-4"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userList" class="bg-gray-100">
+            <td (click)="onSelectUser(user)" class="cursor-pointer py-2 px-4">{{ user.Name }}</td>
+            <td (click)="onSelectUser(user)" class="cursor-pointer py-2 px-4">{{ user.Email }}</td>
+            <td (click)="onSelectUser(user)" class="cursor-pointer py-2 px-4">{{ user.Phone }}</td>
+            <td class="py-2 px-4">
+              <button (click)="onDeleteUser(user.Id)" class="text-red-500">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
+          <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide  after:content-['+']">Producer</summary>
+          <div class="">
+              <h2 class="mt-2 text-lg font-bold text-center">Input Fields</h2>
+              <hr class="h-px my-2 bg-gray-200 border-1.5">
+              <!-- <form class="flex flex-col pt-2 pl-4 mb-2 space-y-4" > -->
+
+
+              <label class="font-semibold tracking-wide">Type </label>
+              <input [(ngModel)]="newProducer.TypeInput" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Name</label>
+              <input [(ngModel)]="newProducer.Name" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Intro</label>
+              <input [(ngModel)]="newProducer.Intro" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Shows List</label>
+              <input [(ngModel)]="newProducer.ShowsListInput" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Thumbnail</label>
+              <input [(ngModel)]="newProducer.Thumbnail" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Rating</label>
+              <input [(ngModel)]="newProducer.Rating" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Weblink</label>
+              <input [(ngModel)]="newProducer.Weblink" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Handle</label>
+              <input [(ngModel)]="newProducer.Handle" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+
+              <button (click)="createProducer()" class="w-3/4 p-2 mt-8 ml-10 font-bold tracking-wider text-white rounded-full bg-neutral-700">Save</button>
+              <!-- </form> -->
+
+              </div>
+      </details>
+      <h3 class="text-xl text-red-700 font-bold">Producer Data View:</h3>
+
+      <table class="bg-white min-w-full border border-gray-300 mt-4 mb-6">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b text-center">Name</th>
+            <th class="py-2 px-4 border-b text-center">Intro</th>
+            <th class="py-2 px-4 border-b text-center">Thumbnail</th>
+            <th class="py-2 px-4 border-b text-center">Rating</th>
+            <th class="py-2 px-4 border-b text-center">Weblink</th>
+            <th class="py-2 px-4 border-b text-center">Handle</th>
+            <th class="py-2 px-4 border-b text-center">Type</th>
+            <th class="py-2 px-4 border-b text-center">ShowsList</th>
+            <!-- Add similar columns for other properties of the Producer model -->
+            <th class="py-2 px-4 border-b text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producer of producers">
+            <td class="py-2 px-4 border-b text-center">{{ producer.Name }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ producer.Intro }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ producer.Thumbnail }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ producer.Rating }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ producer.Weblink }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ producer.Handle }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ producer.Type.join(', ') }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ producer.ShowsList.join(', ') }}</td>
+            <!-- Add similar columns for other properties of the Producer model -->
+            <td class="py-2 px-4 border-b text-center">
+              <button (click)="selectProducer(producer)" class="text-blue-500 hover:underline">Edit</button>
+              <button (click)="deleteProducer(producer.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
+          <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide  after:content-['+']">Celebs</summary>
+          <p class="px-4 py-3">
+          Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+          </p>
+      </details>
+
+      <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
+          <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide after:content-['+']">Event</summary>
+          <p class="px-4 py-3">
+          Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
+          </p>
+      </details>
+
+      <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
+          <summary class="w-full bg-white text-dark flex justify-between px-4 py-3 after:content-['+'] tracking-wide font-bold ">Poll</summary>
+          <p class="px-4 py-3">
+          Fusce sed laoreet ex. Aenean justo nisl, eleifend eget eleifend sit amet, imperdiet id libero. Suspendisse et tempus leo, et lacinia arcu. Etiam at ante in est efficitur fringilla eleifend nec tellus. Integer sed auctor lectus, nec ullamcorper arcu. Nullam nec eros elit. Nulla tempor massa ut quam elementum dignissim. Sed eu pulvinar est, vel vehicula dolor. Pellentesque in ante vel elit facilisis consectetur eu id felis
+          </p>
+      </details>
+
+      <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
+          <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide after:content-['+']">
+        Content
+          </summary>
+          <p class="px-4 py-3">
+          Etiam maximus vitae eros eu vestibulum. Donec posuere, magna non tincidunt dignissim, magna tortor mollis augue, at maximus ante lacus vel tellus. Vestibulum vestibulum consectetur tortor id sagittis. Suspendisse nisi ipsum, pretium a lorem at, laoreet condimentum arcu
+          </p>
+      </details>
+
+      <style>
+              details summary::-webkit-details-marker {
+              display: none;
+          }
+
+
+          details[open] summary {
+              background: rgb(57, 57, 57);
+              color: white
+          }
+
+          details[open] summary::after {
+              content: "-";
+          }
+
+          details[open] summary ~ * {
+              animation: slideDown 0.3s ease-in-out;
+          }
+
+          details[open] summary p {
+              opacity: 0;
+              animation-name: showContent;
+              animation-duration: 0.6s;
+              animation-delay: 0.2s;
+              animation-fill-mode: forwards;
+              margin: 0;
+          }
+
+          @keyframes showContent {
+              from {
+              opacity: 0;
+              height: 0;
+              }
+              to {
+              opacity: 1;
+              height: auto;
+              }
+          }
+          @keyframes slideDown {
+              from {
+              opacity: 0;
+              height: 0;
+              padding: 0;
+              }
+
+              to {
+              opacity: 1;
+              height: auto;
+              }
+          }
+      </style>
+
+
+      <div class="py-4 mt-8 font-semibold text-right text-black">Create by <a href="https://hafidmaulana.vercel.app">Tichkule And Tichkule Company</a></div>
+  </div>
+
+</div>
