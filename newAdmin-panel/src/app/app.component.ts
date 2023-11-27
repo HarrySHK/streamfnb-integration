@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ContentService } from '../app/content.service';
+import { ContentService } from './content.service';
+import { Content } from './content.model';
+
 
 @Component({
   selector: 'app-root',
@@ -8,65 +9,47 @@ import { ContentService } from '../app/content.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  contentForm: FormGroup;
-  contentList: any[] = [];
-  selectedContent: any;
+  contents: Content[] = [];
+  selectedContent: Content | null = null;
 
-  constructor(private fb: FormBuilder, private contentService: ContentService) {
-    this.contentForm = this.fb.group({
-      Language: ['', Validators.required],
-      Producer: ['', Validators.required],
-      Show: [''],
-      Event: [''],
-      Category: [''],
-      // Add other fields here based on your Content model
-    });
-  }
+  constructor(private contentService: ContentService) {}
 
   ngOnInit(): void {
-    this.refreshContentList();
+    this.getContents();
   }
 
-  refreshContentList() {
-    this.contentService.getAllContent().subscribe(data => {
-      this.contentList = data;
+  getContents(): void {
+    this.contentService.getContents().subscribe(contents => {
+      this.contents = contents;
     });
   }
 
-  onSubmit() {
-    if (this.contentForm.valid) {
-      const formData = this.contentForm.value;
-      if (this.selectedContent) {
-        // Update existing content
-        this.contentService.updateContent(this.selectedContent.Id, formData).subscribe(() => {
-          this.clearForm();
-          this.refreshContentList();
-        });
-      } else {
-        // Create new content
-        this.contentService.addContent(formData).subscribe(() => {
-          this.clearForm();
-          this.refreshContentList();
-        });
-      }
-    }
-  }
-
-  onSelectContent(content: any) {
+  onSelect(content: Content): void {
     this.selectedContent = content;
-    this.contentForm.patchValue(content);
   }
 
-  onDeleteContent(id: string) {
-    this.contentService.deleteContent(id).subscribe(() => {
-      this.refreshContentList();
-      this.clearForm();
-    });
-  }
-
-  clearForm() {
-    this.contentForm.reset();
+  clearSelection(): void {
     this.selectedContent = null;
   }
 
+  onSubmit(content: Content): void {
+    if (this.selectedContent) {
+      this.contentService.updateContent(this.selectedContent.Id, content).subscribe(() => {
+        this.clearSelection();
+        this.getContents();
+      });
+    } else {
+      this.contentService.addContent(content).subscribe(() => {
+        this.clearSelection();
+        this.getContents();
+      });
+    }
+  }
+
+  onDelete(id: string): void {
+    this.contentService.deleteContent(id).subscribe(() => {
+      this.clearSelection();
+      this.getContents();
+    });
+  }
 }

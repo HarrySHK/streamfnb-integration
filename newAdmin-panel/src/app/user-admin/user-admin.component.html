@@ -161,25 +161,188 @@
 
       <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
           <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide  after:content-['+']">Celebs</summary>
-          <p class="px-4 py-3">
-          Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
-          </p>
+          <div class="">
+            <h2 class="mt-2 text-lg font-bold text-center">Input Fields</h2>
+            <hr class="h-px my-2 bg-gray-200 border-1.5">
+            <!-- <form class="flex flex-col pt-2 pl-4 mb-2 space-y-4" > -->
+
+
+            <label class="font-semibold tracking-wide">Type </label>
+            <input [(ngModel)]="newCelebs.TypeInput" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+            <label class="font-semibold tracking-wide">Name</label>
+            <input [(ngModel)]="newCelebs.Name" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+            <label class="font-semibold tracking-wide">Intro</label>
+            <input [(ngModel)]="newCelebs.Intro" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+            <label class="font-semibold tracking-wide">Thumbnail</label>
+            <input [(ngModel)]="newCelebs.Thumbnail" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+            <label class="font-semibold tracking-wide">Rating</label>
+            <input [(ngModel)]="newCelebs.Rating" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+            <label class="font-semibold tracking-wide">Weblink</label>
+            <input [(ngModel)]="newCelebs.Weblink" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+            <label class="font-semibold tracking-wide">Handle</label>
+            <input [(ngModel)]="newCelebs.Handle" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+
+            <button (click)="createCelebs()" class="w-3/4 p-2 mt-8 ml-10 font-bold tracking-wider text-white rounded-full bg-neutral-700">Save</button>
+            <!-- </form> -->
+
+            </div>
       </details>
+      <h3 class="text-xl text-red-700 font-bold">Celebs Data View:</h3>
+      <table class="bg-white min-w-full border border-gray-300 mt-4 mb-6">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b text-center">Name</th>
+            <th class="py-2 px-4 border-b text-center">Intro</th>
+            <th class="py-2 px-4 border-b text-center">Thumbnail</th>
+            <th class="py-2 px-4 border-b text-center">Rating</th>
+            <th class="py-2 px-4 border-b text-center">Weblink</th>
+            <th class="py-2 px-4 border-b text-center">Handle</th>
+            <th class="py-2 px-4 border-b text-center">Type</th>
+            <!-- Add similar columns for other properties of the Producer model -->
+            <th class="py-2 px-4 border-b text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let celeb of celebs">
+            <td class="py-2 px-4 border-b text-center">{{ celeb.Name }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ celeb.Intro }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ celeb.Thumbnail }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ celeb.Rating }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ celeb.Weblink }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ celeb.Handle }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ celeb.Type.join(', ') }}</td>
+            <!-- Add similar columns for other properties of the Producer model -->
+            <td class="py-2 px-4 border-b text-center">
+              <button (click)="selectCelebs(celeb)" class="text-blue-500 hover:underline">Edit</button>
+              <button (click)="deleteCelebs(celeb.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
           <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide after:content-['+']">Event</summary>
-          <p class="px-4 py-3">
-          Nunc posuere dapibus urna quis cursus. Mauris malesuada tincidunt diam vel placerat mi tincidunt ac. Nullam augue urna, venenatis ut blandit eget, auctor vel eros. In ut dolor ante
-          </p>
+          <div class="">
+            <h2 class="mt-2 text-lg font-bold text-center">Input Fields</h2>
+            <hr class="h-px my-2 bg-gray-200 border-1.5">
+            <!-- <form class="flex flex-col pt-2 pl-4 mb-2 space-y-4" > -->
+
+
+
+              <label class="font-semibold tracking-wide">Name</label>
+              <input [(ngModel)]="newEvent.Name" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Thumbnail</label>
+              <input [(ngModel)]="newEvent.Thumbnail" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+              <label class="font-semibold tracking-wide">Trending </label>
+              <input [(ngModel)]="newEvent.Trending" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+            <label class="font-semibold tracking-wide">Rating</label>
+            <input [(ngModel)]="newEvent.Date" type="text" class="w-3/4 p-3 border-2 border-gray-400 rounded-lg outline-none">
+
+
+
+            <button (click)="createEvent()" class="w-3/4 p-2 mt-8 ml-10 font-bold tracking-wider text-white rounded-full bg-neutral-700">Save</button>
+            <!-- </form> -->
+
+            </div>
       </details>
+
+      <h3 class="text-xl text-red-700 font-bold">Event Data View:</h3>
+      <table class="bg-white min-w-full border border-gray-300 mt-4 mb-6">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b text-center">Name</th>
+            <th class="py-2 px-4 border-b text-center">Thumbnail</th>
+            <th class="py-2 px-4 border-b text-center">Trending</th>
+            <th class="py-2 px-4 border-b text-center">Date</th>
+            <!-- Add similar columns for other properties of the Producer model -->
+            <th class="py-2 px-4 border-b text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events">
+            <td class="py-2 px-4 border-b text-center">{{ event.Name }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ event.Thumbnail }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ event.Trending }}</td>
+            <td class="py-2 px-4 border-b text-center">{{ event.Date }}</td>
+            <!-- Add similar columns for other properties of the Producer model -->
+            <td class="py-2 px-4 border-b text-center">
+              <button (click)="selectEvent(event)" class="text-blue-500 hover:underline">Edit</button>
+              <button (click)="deleteEvent(event.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
           <summary class="w-full bg-white text-dark flex justify-between px-4 py-3 after:content-['+'] tracking-wide font-bold ">Poll</summary>
-          <p class="px-4 py-3">
-          Fusce sed laoreet ex. Aenean justo nisl, eleifend eget eleifend sit amet, imperdiet id libero. Suspendisse et tempus leo, et lacinia arcu. Etiam at ante in est efficitur fringilla eleifend nec tellus. Integer sed auctor lectus, nec ullamcorper arcu. Nullam nec eros elit. Nulla tempor massa ut quam elementum dignissim. Sed eu pulvinar est, vel vehicula dolor. Pellentesque in ante vel elit facilisis consectetur eu id felis
-          </p>
-      </details>
+          <form [formGroup]="pollForm" (ngSubmit)="onSubmitp()" class="mb-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="Event" class="block text-sm font-semibold text-gray-600">Event:</label>
+                <input type="text" id="Event" formControlName="Event" class="mt-1 p-2 border rounded w-full" />
+              </div>
 
+              <div>
+                <label for="Producer" class="block text-sm font-semibold text-gray-600">Producer:</label>
+                <input type="text" id="Producer" formControlName="Producer" class="mt-1 p-2 border rounded w-full" />
+              </div>
+
+              <div>
+                <label for="Date" class="block text-sm font-semibold text-gray-600">Date:</label>
+                <input type="text" id="Date" formControlName="Date" class="mt-1 p-2 border rounded w-full" />
+              </div>
+
+              <div>
+                <label for="SurveyItem" class="block text-sm font-semibold text-gray-600">Survey Item:</label>
+                <input type="text" id="SurveyItem" formControlName="SurveyItem" class="mt-1 p-2 border rounded w-full" />
+              </div>
+
+              <div>
+                <label for="SurveyValue" class="block text-sm font-semibold text-gray-600">Survey Value:</label>
+                <input type="text" id="SurveyValue" formControlName="SurveyValue" class="mt-1 p-2 border rounded w-full" />
+              </div>
+            </div>
+
+            <button type="submit" class="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-700">Submit</button>
+          </form>
+      </details>
+      <h3 class="text-xl text-red-700 font-bold">Poll Data View:</h3>
+
+      <table class="min-w-full bg-white border border-gray-300 mt-4 mb-6">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b text-left">Event</th>
+            <th class="py-2 px-4 border-b text-left">Producer</th>
+            <th class="py-2 px-4 border-b text-left">Date</th>
+            <th class="py-2 px-4 border-b text-left">Survey Item</th>
+            <th class="py-2 px-4 border-b text-left">Survey Value</th>
+            <th class="py-2 px-4 border-b text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let poll of polls">
+            <td class="py-2 px-4 border-b">{{ poll.Event }}</td>
+            <td class="py-2 px-4 border-b">{{ poll.Producer }}</td>
+            <td class="py-2 px-4 border-b">{{ poll.Date }}</td>
+            <td class="py-2 px-4 border-b">{{ poll.SurveyDataList.Item }}</td>
+            <td class="py-2 px-4 border-b">{{ poll.SurveyDataList.Value }}</td>
+            <td class="py-2 px-4 border-b">
+              <button (click)="onSelectPoll(poll)" class="text-blue-500 hover:underline">Edit</button>
+              <button (click)="onDeletePoll(poll.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <details class="w-full mb-3 bg-white border-2 cursor-pointer border-black/60">
           <summary class="w-full bg-white font-bold text-dark flex justify-between px-4 py-3 tracking-wide after:content-['+']">
         Content

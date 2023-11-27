@@ -33,3 +33,6 @@ export class ProducerService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }
+
+
+

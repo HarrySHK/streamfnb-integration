@@ -1,92 +1,257 @@
-// producer-admin.component.ts
+// Celebs-admin.component.ts
+
+// import { Component, OnInit } from '@angular/core';
+// import { CelebsService } from '../Celebs.service';
+// import { Celebs } from '../Celebs.model';
+
+// @Component({
+//   selector: 'app-Celebs-admin',
+//   templateUrl: './Celebs-admin.component.html',
+//   styleUrls: ['./Celebs-admin.component.css'],
+// })
+// export class CelebsAdminComponent implements OnInit {
+//   Celebss: Celebs[] = [];
+//   selectedCelebs: Celebs | null = null;
+//   newCelebs: Celebs = {
+//     id: '',
+//     Type: [],
+//     Name: '',
+//     Intro: '',
+//     ShowsList: [],
+//     Thumbnail: '',
+//     Rating: '',
+//     Weblink: '',
+//     Handle: '',
+//     TypeInput: '',  // new property for input field
+//     ShowsListInput: '',  // new property for input field
+//   };
+
+//   constructor(private CelebsService: CelebsService) {}
+
+//   ngOnInit(): void {
+//     this.getCelebss();
+//   }
+
+//   getCelebss(): void {
+//     this.CelebsService.getCelebss().subscribe((Celebss) => {
+//       this.Celebss = Celebss;
+//     });
+//   }
+
+//   selectCelebs(Celebs: Celebs): void {
+//     this.selectedCelebs = Celebs;
+//   }
+
+//   createCelebs(): void {
+//     // Convert TypeInput and ShowsListInput to arrays
+//     const formData = {
+//       ...this.newCelebs,
+//       Type: this.newCelebs.TypeInput.split(',').map((type: string) => type.trim()),
+//       ShowsList: this.newCelebs.ShowsListInput.split(',').map((show: string) => show.trim()),
+//     };
+
+//     this.CelebsService.createCelebs(formData).subscribe(() => {
+//       this.getCelebss();
+//       this.clearForm();
+//     });
+//   }
+
+//   updateCelebs(): void {
+//     if (this.selectedCelebs) {
+//       this.CelebsService
+//         .updateCelebs(this.selectedCelebs.id, this.selectedCelebs)
+//         .subscribe(() => {
+//           this.getCelebss();
+//           this.selectedCelebs = null;
+//         });
+//     }
+//   }
+
+//   deleteCelebs(id: string): void {
+//     this.CelebsService.deleteCelebs(id).subscribe(() => {
+//       this.getCelebss();
+//       this.clearForm();
+//     });
+//   }
+
+//   clearForm(): void {
+//     this.newCelebs = {
+//       id: '',
+//       Type: [],
+//       Name: '',
+//       Intro: '',
+//       ShowsList: [],
+//       Thumbnail: '',
+//       Rating: '',
+//       Weblink: '',
+//       Handle: '',
+//       TypeInput: '',  // new property for input field
+//       ShowsListInput: '',  // new property for input field
+//     };
+//   }
+// }
+
+// import { Component, OnInit } from '@angular/core';
+// import { CelebsService } from '../celebs.service';
+// import { Celebs } from '../celebs.model';
+
+// @Component({
+//   selector: 'app-Celebs-admin',
+//   templateUrl: './Celebs-admin.component.html',
+//   styleUrls: ['./Celebs-admin.component.css'],
+// })
+// export class CelebsAdminComponent implements OnInit {
+//   celebs: Celebs[] = [];
+//   selectedCelebs: Celebs | null = null;
+//   newCelebs: Celebs = {
+//     id: '',
+//     Type: [],
+//     Name: '',
+//     Intro: '',
+//     Thumbnail: '',
+//     Rating: '',
+//     Weblink: '',
+//     Handle: '',
+//     TypeInput: '',  // new property for input field
+//   };
+
+//   constructor(private CelebsService: CelebsService) {}
+
+//   ngOnInit(): void {
+//     this.getCelebss();
+//   }
+
+//   getCelebss(): void {
+//     this.CelebsService.getCelebss().subscribe((celebs) => {
+//       this.celebs = celebs;
+//     });
+//   }
+
+//   selectCelebs(celebs: Celebs): void {
+//     this.selectedCelebs = celebs;
+//   }
+
+//   createCelebs(): void {
+//     // Convert TypeInput and ShowsListInput to arrays
+//     const formData = {
+//       ...this.newCelebs,
+//       Type: this.newCelebs.TypeInput.split(',').map((type: string) => type.trim())
+//     };
+
+//     this.CelebsService.createCelebs(formData).subscribe(() => {
+//       this.getCelebss();
+//       this.clearForm();
+//     });
+//   }
+
+//   updateCelebs(): void {
+//     if (this.selectedCelebs) {
+//       this.CelebsService
+//         .updateCelebs(this.selectedCelebs.id, this.selectedCelebs)
+//         .subscribe(() => {
+//           this.getCelebss();
+//           this.selectedCelebs = null;
+//         });
+//     }
+//   }
+
+//   deleteCelebs(id: string): void {
+//     this.CelebsService.deleteCelebs(id).subscribe(() => {
+//       this.getCelebss();
+//       this.clearForm();
+//     });
+//   }
+
+//   clearForm(): void {
+//     this.newCelebs = {
+//       id: '',
+//       Type: [],
+//       Name: '',
+//       Intro: '',
+//       Thumbnail: '',
+//       Rating: '',
+//       Weblink: '',
+//       Handle: '',
+//       TypeInput: '',  // new property for input field
+//     };
+//   }
+// }
+
+// event-admin.component.ts
 
 import { Component, OnInit } from '@angular/core';
-import { ProducerService } from '../producer.service';
-import { Producer } from '../producer.model';
+import {EventService} from '../event.service';
+import { Event } from '../event.model';
 
 @Component({
-  selector: 'app-producer-admin',
-  templateUrl: './producer-admin.component.html',
-  styleUrls: ['./producer-admin.component.css'],
+  selector: 'app-Event-admin',
+  templateUrl: './Event-admin.component.html',
+  styleUrls: ['./Event-admin.component.css'],
 })
-export class ProducerAdminComponent implements OnInit {
-  producers: Producer[] = [];
-  selectedProducer: Producer | null = null;
-  newProducer: Producer = {
+export class EventAdminComponent implements OnInit {
+  Event: Event[] = [];
+  selectedEvent: Event | null = null;
+  newEvent: Event = {
     id: '',
-    Type: [],
     Name: '',
-    Intro: '',
-    ShowsList: [],
     Thumbnail: '',
-    Rating: '',
-    Weblink: '',
-    Handle: '',
-    TypeInput: '',  // new property for input field
-    ShowsListInput: '',  // new property for input field
+    Trending: '',
+    Date: ''
   };
 
-  constructor(private producerService: ProducerService) {}
+  constructor(private EventService: EventService) {}
 
   ngOnInit(): void {
-    this.getProducers();
+    this.getEvents();
   }
 
-  getProducers(): void {
-    this.producerService.getProducers().subscribe((producers) => {
-      this.producers = producers;
+  getEvents(): void {
+    this.EventService.getEvents().subscribe((Event) => {
+      this.Event = Event;
     });
   }
 
-  selectProducer(producer: Producer): void {
-    this.selectedProducer = producer;
+  selectEvent(Event: Event): void {
+    this.selectedEvent = Event;
   }
 
-  createProducer(): void {
+  createEvent(): void {
     // Convert TypeInput and ShowsListInput to arrays
     const formData = {
-      ...this.newProducer,
-      Type: this.newProducer.TypeInput.split(',').map((type: string) => type.trim()),
-      ShowsList: this.newProducer.ShowsListInput.split(',').map((show: string) => show.trim()),
+      ...this.newEvent,
     };
 
-    this.producerService.createProducer(formData).subscribe(() => {
-      this.getProducers();
+    this.EventService.createEvent(formData).subscribe(() => {
+      this.getEvents();
       this.clearForm();
     });
   }
 
-  updateProducer(): void {
-    if (this.selectedProducer) {
-      this.producerService
-        .updateProducer(this.selectedProducer.id, this.selectedProducer)
+  updateEvent(): void {
+    if (this.selectedEvent) {
+      this.EventService
+        .updateEvent(this.selectedEvent.id, this.selectedEvent)
         .subscribe(() => {
-          this.getProducers();
-          this.selectedProducer = null;
+          this.getEvents();
+          this.selectedEvent = null;
         });
     }
   }
 
-  deleteProducer(id: string): void {
-    this.producerService.deleteProducer(id).subscribe(() => {
-      this.getProducers();
+  deleteEvent(id: string): void {
+    this.EventService.deleteEvent(id).subscribe(() => {
+      this.getEvents();
       this.clearForm();
     });
   }
 
   clearForm(): void {
-    this.newProducer = {
+    this.newEvent = {
       id: '',
-      Type: [],
       Name: '',
-      Intro: '',
-      ShowsList: [],
       Thumbnail: '',
-      Rating: '',
-      Weblink: '',
-      Handle: '',
-      TypeInput: '',  // new property for input field
-      ShowsListInput: '',  // new property for input field
+      Trending: '',
+      Date: ''
     };
   }
 }
