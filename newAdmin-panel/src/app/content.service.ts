@@ -1,30 +1,35 @@
 // content.service.ts
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Content } from './content.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ContentService {
-  private apiUrl = 'your-api-url'; // Replace with your API URL
+  private apiUrl = 'http://localhost:5091/api/content'; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 
-  getContents(): Observable<Content[]> {
-    return this.http.get<Content[]>(`${this.apiUrl}`);
+  getContentList(): Observable<Content[]> {
+    return this.http.get<Content[]>(this.apiUrl);
   }
 
-  addContent(content: Content): Observable<Content> {
-    return this.http.post<Content>(`${this.apiUrl}`, content);
+  getContent(id: string): Observable<Content> {
+    return this.http.get<Content>(`${this.apiUrl}/${id}`);
   }
 
-  updateContent(id: string, content: Content): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/${id}`, content);
+  createContent(content: Content): Observable<Content> {
+    return this.http.post<Content>(this.apiUrl, content);
   }
 
-  deleteContent(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  updateContent(id: string, content: Content): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, content);
+  }
+
+  deleteContent(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

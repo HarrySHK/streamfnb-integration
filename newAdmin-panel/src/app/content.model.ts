@@ -1,4 +1,5 @@
 // content.model.ts
+
 export interface Content {
   Id: string;
   Language: string;

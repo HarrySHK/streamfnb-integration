@@ -38,6 +38,225 @@
   </ul>
 </div> -->
 
-<app-user-admin></app-user-admin>
+<!-- <app-user-admin></app-user-admin> -->
 
 <!-- <app-producer-admin></app-producer-admin> -->
+
+<!-- content.component.html -->
+
+<div>
+  <h2>Content List</h2>
+  <ul>
+    <li *ngFor="let content of contentList" (click)="onSelect(content)">
+      {{ content.Title }}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2>Content Form</h2>
+  <form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
+
+    <label for="Language">Language:</label>
+    <input type="text" id="Language" formControlName="Language" />
+
+    <label for="Producer">Producer:</label>
+    <input type="text" id="Producer" formControlName="Producer" />
+
+    <label for="Show">Show:</label>
+    <input type="text" id="Show" formControlName="Show" />
+
+    <label for="Event">Event:</label>
+    <input type="text" id="Event" formControlName="Event" />
+
+    <label for="Category">Category:</label>
+    <input type="text" id="Category" formControlName="Category" />
+
+    <label for="AgeRating">Age Rating:</label>
+    <input type="text" id="AgeRating" formControlName="AgeRating" />
+
+    <label for="Season">Season:</label>
+    <input type="text" id="Season" formControlName="Season" />
+
+    <label for="Episode">Episode:</label>
+    <input type="text" id="Episode" formControlName="Episode" />
+
+    <label for="Title">Title:</label>
+    <input type="text" id="Title" formControlName="Title" />
+
+    <label for="Intro">Intro:</label>
+    <textarea id="Intro" formControlName="Intro"></textarea>
+
+    <label for="Featured">Featured:</label>
+    <input type="checkbox" id="Featured" formControlName="Featured" />
+
+    <label for="Thumbnail">Thumbnail:</label>
+    <input type="text" id="Thumbnail" formControlName="Thumbnail" />
+
+    <label for="Region">Region:</label>
+    <input type="text" id="Region" formControlName="Region" />
+
+    <label for="Poster">Poster:</label>
+    <input type="text" id="Poster" formControlName="Poster" />
+
+    <label for="Weblink">Weblink:</label>
+    <input type="text" id="Weblink" formControlName="Weblink" />
+
+    <label for="IsLive">Is Live:</label>
+    <input type="checkbox" id="IsLive" formControlName="IsLive" />
+
+    <label for="DatePublished">Date Published:</label>
+    <input type="text" id="DatePublished" formControlName="DatePublished" />
+
+    <label for="AuthorsList">Authors List:</label>
+    <input type="text" id="AuthorsList" formControlName="AuthorsList" />
+
+    <label for="ArchiveDate">Archive Date:</label>
+    <input type="text" id="ArchiveDate" formControlName="ArchiveDate" />
+
+    <label for="TotalViews">Total Views:</label>
+    <input type="number" id="TotalViews" formControlName="TotalViews" />
+
+    <label for="Keywords">Keywords:</label>
+    <input type="text" id="Keywords" formControlName="Keywords" />
+
+
+    <label for="CelebList">CelebList:</label>
+    <div formArrayName="CelebList">
+      <div *ngFor="let celeb of celebList.controls; let i = index" [formGroupName]="i">
+        <label for="CelebName">Name:</label>
+        <input type="text" [id]="'CelebName' + i" formControlName="Name" />
+
+        <label for="ContentIntro">Content Intro:</label>
+        <textarea [id]="'ContentIntro' + i" formControlName="ContentIntro"></textarea>
+
+        <label for="CurrentRating">Current Rating:</label>
+        <input type="number" [id]="'CurrentRating' + i" formControlName="CurrentRating" />
+
+        <label for="Thumbnail">Thumbnail:</label>
+        <input type="text" [id]="'CelebThumbnail' + i" formControlName="Thumbnail" />
+
+        <label for="TotalClicks">Total Clicks:</label>
+        <input type="number" [id]="'TotalClicks' + i" formControlName="TotalClicks" />
+      </div>
+    </div>
+
+
+    <label for="Survey">Survey:</label>
+    <div formArrayName="Survey">
+      <div *ngFor="let survey of surveyList.controls; let i = index" [formGroupName]="i">
+        <label for="SurveyTitle">Title:</label>
+        <input type="text" [id]="'SurveyTitle' + i" formControlName="Title" />
+
+        <label for="TotalResponses">Total Responses:</label>
+        <input type="number" [id]="'TotalResponses' + i" formControlName="TotalResponses" />
+
+
+        <label for="ChoiceList">Choice List:</label>
+        <div formArrayName="ChoiceList">
+          <div *ngFor="let choice of surveyChoiceList.controls; let j = index" [formGroupName]="j">
+            <label for="ChoiceTitle">Title:</label>
+            <input type="text" [id]="'ChoiceTitle' + j" formControlName="Title" />
+
+            <label for="ChoiceDescription">Description:</label>
+            <textarea [id]="'ChoiceDescription' + j" formControlName="Description"></textarea>
+
+            <label for="ResponseSize">Response Size:</label>
+            <input type="number" [id]="'ResponseSize' + j" formControlName="ResponseSize" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <label for="PlayerEntryList">Player Entry List:</label>
+    <div formArrayName="PlayerEntryList">
+      <div *ngFor="let playerEntry of playerEntryList.controls; let i = index" [formGroupName]="i">
+        <label for="Location">Location:</label>
+        <input type="number" [id]="'Location' + i" formControlName="Location" />
+
+        <label for="PlayerID">Player ID:</label>
+        <input type="number" [id]="'PlayerID' + i" formControlName="PlayerID" />
+
+        <label for="Clicks">Clicks:</label>
+        <input type="number" [id]="'Clicks' + i" formControlName="Clicks" />
+      </div>
+    </div>
+
+
+    <label for="Hotspots">Hotspots:</label>
+    <div formArrayName="Hotspots">
+      <div *ngFor="let hotspot of hotspotList.controls; let i = index" [formGroupName]="i">
+        <label for="HotspotLocation">Location:</label>
+        <input type="number" [id]="'HotspotLocation' + i" formControlName="Location" />
+
+        <label for="HotspotImageURL">Image URL:</label>
+        <input type="text" [id]="'HotspotImageURL' + i" formControlName="ImageURL" />
+
+        <label for="HotspotClicks">Clicks:</label>
+        <input type="number" [id]="'HotspotClicks' + i" formControlName="Clicks" />
+
+        <label for="HotspotTooltip">Tooltip:</label>
+        <input type="text" [id]="'HotspotTooltip' + i" formControlName="Tooltip" />
+      </div>
+    </div>
+
+    <label for="Advertisements">Advertisements:</label>
+    <div formArrayName="Advertisements">
+      <div *ngFor="let ad of advertisementList.controls; let i = index" [formGroupName]="i">
+        <label for="AdStartLocation">Start Location:</label>
+        <input type="number" [id]="'AdStartLocation' + i" formControlName="StartLocation" />
+
+        <label for="AdEndLocation">End Location:</label>
+        <input type="number" [id]="'AdEndLocation' + i" formControlName="EndLocation" />
+
+        <label for="AdType">Type:</label>
+        <input type="text" [id]="'AdType' + i" formControlName="Type" />
+
+        <label for="AdTotalSkips">Total Skips:</label>
+        <input type="number" [id]="'AdTotalSkips' + i" formControlName="TotalSkips" />
+      </div>
+    </div>
+
+    <label for="Overlays">Overlays:</label>
+    <div formArrayName="Overlays">
+      <div *ngFor="let overlay of overlayList.controls; let i = index" [formGroupName]="i">
+        <label for="OverlayLocation">Location:</label>
+        <input type="number" [id]="'OverlayLocation' + i" formControlName="Location" />
+
+        <label for="OverlayType">Type:</label>
+        <input type="text" [id]="'OverlayType' + i" formControlName="Type" />
+
+        <label for="OverlayTitle">Title:</label>
+        <input type="text" [id]="'OverlayTitle' + i" formControlName="Title" />
+
+        <label for="OverlayChoiceList">Choice List:</label>
+        <div formArrayName="ChoiceList">
+          <div *ngFor="let choice of overlayChoiceList.controls; let j = index" [formGroupName]="j">
+            <label for="OverlayChoiceTitle">Title:</label>
+            <input type="text" [id]="'OverlayChoiceTitle' + j" formControlName="Title" />
+
+            <label for="OverlayChoiceTotalResponses">Total Responses:</label>
+            <input type="number" [id]="'OverlayChoiceTotalResponses' + j" formControlName="TotalResponses" />
+          </div>
+        </div>
+
+        <label for="OverlayPauseVideo">Pause Video:</label>
+        <input type="checkbox" [id]="'OverlayPauseVideo' + i" formControlName="PauseVideo" />
+
+        <label for="OverlayDisplayTimeout">Display Timeout:</label>
+        <input type="text" [id]="'OverlayDisplayTimeout' + i" formControlName="DisplayTimeout" />
+
+        <label for="OverlayOptional">Optional:</label>
+        <input type="checkbox" [id]="'OverlayOptional' + i" formControlName="Optional" />
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!contentForm.valid">Submit</button>
+  </form>
+</div>
+
+<div *ngIf="selectedContent">
+  <h2>Selected Content</h2>
+  <p>{{ selectedContent | json }}</p>
+  <button (click)="onDelete(selectedContent.Id)">Delete</button>
+</div>
