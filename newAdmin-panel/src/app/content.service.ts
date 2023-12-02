@@ -9,27 +9,27 @@ import { Content } from './content.model';
   providedIn: 'root',
 })
 export class ContentService {
-  private apiUrl = 'http://localhost:5091/api/content'; // Replace with your API endpoint
+  private apiUrl = 'http://localhost:5091'; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 
-  getContentList(): Observable<Content[]> {
-    return this.http.get<Content[]>(this.apiUrl);
-  }
-
-  getContent(id: string): Observable<Content> {
-    return this.http.get<Content>(`${this.apiUrl}/${id}`);
-  }
-
   createContent(content: Content): Observable<Content> {
-    return this.http.post<Content>(this.apiUrl, content);
+    return this.http.post<Content>(`${this.apiUrl}/api/content`, content);
   }
 
-  updateContent(id: string, content: Content): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, content);
+  getAllContent(): Observable<Content[]> {
+    return this.http.get<Content[]>(`${this.apiUrl}/api/content`);
   }
 
-  deleteContent(id: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`);
+  getContentById(id: string): Observable<Content> {
+    return this.http.get<Content>(`${this.apiUrl}/api/content/${id}`);
+  }
+
+  updateContent(id: string, content: Content): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/api/content/${id}`, content);
+  }
+
+  deleteContent(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/api/content/${id}`);
   }
 }

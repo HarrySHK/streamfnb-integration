@@ -1,37 +1,37 @@
-<!-- <div class="admin-panel max-w-xl mx-auto my-8 p-6 bg-white rounded shadow-md">
-  <h2 class="text-2xl font-semibold mb-4">Content Administration</h2>
+<!-- <div class="max-w-xl p-6 mx-auto my-8 bg-white rounded shadow-md admin-panel">
+  <h2 class="mb-4 text-2xl font-semibold">Content Administration</h2>
 
   <form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
     <div class="mb-4">
       <label for="language" class="block text-sm font-medium text-gray-600">Language:</label>
-      <input type="text" id="language" formControlName="Language" class="mt-1 p-2 border rounded-md w-full">
+      <input type="text" id="language" formControlName="Language" class="w-full p-2 mt-1 border rounded-md">
     </div>
 
     <div class="mb-4">
       <label for="producer" class="block text-sm font-medium text-gray-600">Producer:</label>
-      <input type="text" id="producer" formControlName="Producer" class="mt-1 p-2 border rounded-md w-full">
+      <input type="text" id="producer" formControlName="Producer" class="w-full p-2 mt-1 border rounded-md">
     </div>
 
     <div class="mb-4">
       <label for="show" class="block text-sm font-medium text-gray-600">Show:</label>
-      <input type="text" id="show" formControlName="Show" class="mt-1 p-2 border rounded-md w-full">
+      <input type="text" id="show" formControlName="Show" class="w-full p-2 mt-1 border rounded-md">
     </div>
 
     <div class="mb-4">
       <label for="event" class="block text-sm font-medium text-gray-600">Event:</label>
-      <input type="text" id="event" formControlName="Event" class="mt-1 p-2 border rounded-md w-full">
+      <input type="text" id="event" formControlName="Event" class="w-full p-2 mt-1 border rounded-md">
     </div>
 
     <div class="mb-4">
       <label for="category" class="block text-sm font-medium text-gray-600">Category:</label>
-      <input type="text" id="category" formControlName="Category" class="mt-1 p-2 border rounded-md w-full">
+      <input type="text" id="category" formControlName="Category" class="w-full p-2 mt-1 border rounded-md">
     </div>
 
-    <button type="submit" [disabled]="contentForm.invalid" class="bg-blue-500 text-white p-2 rounded-md">Save</button>
+    <button type="submit" [disabled]="contentForm.invalid" class="p-2 text-white bg-blue-500 rounded-md">Save</button>
   </form>
 
   <ul class="mt-8">
-    <li *ngFor="let content of contentList" class="flex justify-between items-center bg-gray-100 p-2 mb-2">
+    <li *ngFor="let content of contentList" class="flex items-center justify-between p-2 mb-2 bg-gray-100">
       <span (click)="onSelectContent(content)" class="cursor-pointer">{{ content.Title }}</span>
       <button (click)="onDeleteContent(content.Id)" class="text-red-500">Delete</button>
     </li>
@@ -44,7 +44,7 @@
 
 <!-- content.component.html -->
 
-<div>
+<!-- <div>
   <h2>Content List</h2>
   <ul>
     <li *ngFor="let content of contentList" (click)="onSelect(content)">
@@ -259,4 +259,222 @@
   <h2>Selected Content</h2>
   <p>{{ selectedContent | json }}</p>
   <button (click)="onDelete(selectedContent.Id)">Delete</button>
+</div> -->
+
+
+
+<!-- content.component.html -->
+<div>
+  <!-- General Content Properties -->
+  <label>Language:</label>
+  <input [(ngModel)]="content.language" placeholder="Language" />
+
+  <label>Producer:</label>
+  <input [(ngModel)]="content.producer" placeholder="Producer" />
+
+  <label>Show:</label>
+  <input [(ngModel)]="content.show" placeholder="Show" />
+
+  <label>Event:</label>
+  <input [(ngModel)]="content.event" placeholder="Event" />
+
+  <label>Category:</label>
+  <input [(ngModel)]="content.category" placeholder="Category" />
+
+  <label>Age Rating:</label>
+  <input [(ngModel)]="content.ageRating" placeholder="Age Rating" />
+
+  <label>Season:</label>
+  <input [(ngModel)]="content.season" placeholder="Season" />
+
+  <label>Episode:</label>
+  <input [(ngModel)]="content.episode" placeholder="Episode" />
+
+  <label>Title:</label>
+  <input [(ngModel)]="content.title" placeholder="Title" />
+
+  <label>Intro:</label>
+  <input [(ngModel)]="content.intro" placeholder="Intro" />
+
+  <label>Featured:</label>
+  <input type="checkbox" [(ngModel)]="content.featured" />
+
+  <label>Thumbnail:</label>
+  <input [(ngModel)]="content.thumbnail" placeholder="Thumbnail" />
+
+  <label>Region:</label>
+  <input [(ngModel)]="content.region" placeholder="Region" />
+
+  <label>Poster:</label>
+  <input [(ngModel)]="content.poster" placeholder="Poster" />
+
+  <label>Weblink:</label>
+  <input [(ngModel)]="content.weblink" placeholder="Weblink" />
+
+  <label>Is Live:</label>
+  <input type="checkbox" [(ngModel)]="content.isLive" />
+
+  <label>Date Published:</label>
+  <input [(ngModel)]="content.datePublished" placeholder="Date Published" />
+
+  <label>Authors List:</label>
+  <input [(ngModel)]="content.authorsList" placeholder="Authors List" />
+
+  <label>Archive Date:</label>
+  <input [(ngModel)]="content.archiveDate" placeholder="Archive Date" />
+
+  <label>Total Views:</label>
+  <input [(ngModel)]="content.totalViews" placeholder="Total Views" />
+
+  <label>Keywords:</label>
+  <input [(ngModel)]="content.keywords" placeholder="Keywords" />
+
+  <!-- Celeb -->
+  <label>Celeb ID:</label>
+  <input [(ngModel)]="celeb.id" placeholder="Celeb ID" />
+
+  <label>Celeb Name:</label>
+  <input [(ngModel)]="celeb.name" placeholder="Celeb Name" />
+
+  <label>Celeb Content Intro:</label>
+  <input [(ngModel)]="celeb.contentIntro" placeholder="Celeb Content Intro" />
+
+  <label>Celeb Current Rating:</label>
+  <input [(ngModel)]="celeb.currentRating" placeholder="Celeb Current Rating" />
+
+  <label>Celeb Thumbnail:</label>
+  <input [(ngModel)]="celeb.thumbnail" placeholder="Celeb Thumbnail" />
+
+  <label>Celeb Total Clicks:</label>
+  <input [(ngModel)]="celeb.totalClicks" placeholder="Celeb Total Clicks" />
+
+  <!-- Survey -->
+  <label>Survey Title:</label>
+  <input [(ngModel)]="survey.title" placeholder="Survey Title" />
+
+  <label>Survey Total Responses:</label>
+  <input [(ngModel)]="survey.totalResponses" placeholder="Survey Total Responses" />
+
+  <!-- Survey Choices (Assuming you want to display them) -->
+  <div *ngFor="let choice of survey.choiceList">
+    <label>Survey Choice Title:</label>
+    <input [(ngModel)]="choice.title" placeholder="Survey Choice Title" />
+
+    <label>Survey Choice Description:</label>
+    <input [(ngModel)]="choice.description" placeholder="Survey Choice Description" />
+
+    <label>Survey Choice Response Size:</label>
+    <input [(ngModel)]="choice.responseSize" placeholder="Survey Choice Response Size" />
+  </div>
+
+  <!-- Player Entry -->
+  <label>Player Location:</label>
+  <input [(ngModel)]="playerEntry.location" placeholder="Player Location" />
+
+  <label>Player ID:</label>
+  <input [(ngModel)]="playerEntry.playerID" placeholder="Player ID" />
+
+  <label>Player Clicks:</label>
+  <input [(ngModel)]="playerEntry.clicks" placeholder="Player Clicks" />
+
+  <!-- Hotspot -->
+  <label>Hotspot Location:</label>
+  <input [(ngModel)]="hotspot.location" placeholder="Hotspot Location" />
+
+  <label>Hotspot Image URL:</label>
+  <input [(ngModel)]="hotspot.imageURL" placeholder="Hotspot Image URL" />
+
+  <label>Hotspot Clicks:</label>
+  <input [(ngModel)]="hotspot.clicks" placeholder="Hotspot Clicks" />
+
+  <label>Hotspot Tooltip:</label>
+  <input [(ngModel)]="hotspot.tooltip" placeholder="Hotspot Tooltip" />
+
+  <!-- Advertisement -->
+  <label>Advertisement Start Location:</label>
+  <input [(ngModel)]="advertisement.startLocation" placeholder="Advertisement Start Location" />
+
+  <label>Advertisement End Location:</label>
+  <input [(ngModel)]="advertisement.endLocation" placeholder="Advertisement End Location" />
+
+  <label>Advertisement Type:</label>
+  <input [(ngModel)]="advertisement.type" placeholder="Advertisement Type" />
+
+  <label>Advertisement Total Skips:</label>
+  <input [(ngModel)]="advertisement.totalSkips" placeholder="Advertisement Total Skips" />
+
+  <!-- Overlay -->
+  <label>Overlay Location:</label>
+  <input [(ngModel)]="overlay.location" placeholder="Overlay Location" />
+
+  <label>Overlay Type:</label>
+  <input [(ngModel)]="overlay.type" placeholder="Overlay Type" />
+
+  <label>Overlay Title:</label>
+  <input [(ngModel)]="overlay.title" placeholder="Overlay Title" />
+
+  <!-- Overlay Choices (Assuming you want to display them) -->
+  <div *ngFor="let choice of overlay.choiceList">
+    <label>Overlay Choice Title:</label>
+    <input [(ngModel)]="choice.title" placeholder="Overlay Choice Title" />
+
+    <label>Overlay Choice Total Responses:</label>
+    <input [(ngModel)]="choice.totalResponses" placeholder="Overlay Choice Total Responses" />
+  </div>
+
+  <label>Overlay Pause Video:</label>
+  <input type="checkbox" [(ngModel)]="overlay.pauseVideo" />
+
+  <label>Overlay Display Timeout:</label>
+  <input [(ngModel)]="overlay.displayTimeout" placeholder="Overlay Display Timeout" />
+
+  <label>Overlay Optional:</label>
+  <input type="checkbox" [(ngModel)]="overlay.optional" />
+
+  <!-- Add input fields for other content properties -->
+
+  <button (click)="submitContent()">Submit</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Display Entered Content -->
+
+
+<!-- Change occurrences of content.surveyList to content.survey -->
+
+<!-- ... Previous code ... -->
+
+<div *ngIf="content.survey && content.survey.length > 0">
+  <h3>Survey Details</h3>
+  <div *ngFor="let survey of content.survey">
+    <label>Survey Title:</label>
+    <div>{{ survey.title }}</div>
+
+    <!-- Continue displaying other survey properties as needed -->
+
+    <!-- Display Survey Choices if applicable -->
+    <div *ngIf="survey.choiceList && survey.choiceList.length > 0">
+      <h4>Survey Choices</h4>
+      <div *ngFor="let choice of survey.choiceList">
+        <label>Survey Choice Title:</label>
+        <div>{{ choice.title }}</div>
+
+        <!-- Continue displaying other choice properties as needed -->
+      </div>
+    </div>
+  </div>
 </div>
