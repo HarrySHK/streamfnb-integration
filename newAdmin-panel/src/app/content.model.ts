@@ -1,60 +1,65 @@
 // content.model.ts
 export class Content {
   Id: string = '';
-  language: string = '';
-  producer: string = '';
-  show: string = '';
-  event: string = '';
-  category: string = '';
-  ageRating: string = '';
-  season: string = '';
-  episode: string = '';
-  title: string = '';
-  intro: string = '';
-  featured: boolean = false;
-  thumbnail: string = '';
-  region: string = '';
-  poster: string = '';
-  weblink: string = '';
-  isLive: boolean = false;
-  datePublished: string = '';
-  authorsList: string = '';
-  archiveDate: string = '';
-  totalViews: number = 0;
-  keywords: string = '';
-  celebList: Celeb[] = [];
-  survey: Survey[] = [];
-  playerEntryList: PlayerEntry[] = [];
-  hotspots: Hotspot[] = [];
-  advertisements: Advertisement[] = [];
-  overlays: Overlay[] = [];
+  Language: string = '';
+  Producer: string = '';
+  Show: string = '';
+  Event: string = '';
+  Category: string = '';
+  AgeRating: string = '';
+  Season: string = '';
+  Episode: string = '';
+  Title: string = '';
+  Intro: string = '';
+  Featured: boolean = false;
+  Thumbnail: string = '';
+  Region: string = '';
+  Poster: string = '';
+  Weblink: string = '';
+  IsLive: boolean = false;
+  DatePublished: string = '';
+  AuthorsList: string = '';
+  ArchiveDate: string = '';
+  TotalViews: number = 0;
+  Keywords: string = '';
+  CelebList: Celeb[] = [];
+  Survey: Survey[] = [];
+  PlayerEntryList: PlayerEntry[] = [];
+  Hotspots: Hotspot[] = [];
+  Advertisements: Advertisement[] = [];
+  Overlays: Overlay[] = [];
+SurveyChoice:SurveyChoice[]=[];
+
 }
 
 export class Celeb {
-  id: number = 0;
-  name: string = '';
-  contentIntro: string = '';
-  currentRating: number = 0;
-  thumbnail: string = '';
-  totalClicks: number = 0;
+  Id: number = 0;
+  Name: string = '';
+  ContentIntro: string = '';
+  CurrentRating: number = 0;
+  Thumbnail: string = '';
+  TotalClicks: number = 0;
+
 }
 
 export class Survey {
-  title: string = '';
-  totalResponses: number = 0;
-  choiceList: SurveyChoice[] = [];
+  Title: string = '';
+  TotalResponses: number = 0;
+  ChoiceList: SurveyChoice[] = [];
+
+  
 }
 
 export class SurveyChoice {
-  title: string = '';
-  description: string = '';
-  responseSize: number = 0;
+  Title: string = '';
+  Description: string = '';
+  ResponseSize: number = 0;
 }
 
 export class PlayerEntry {
-  location: number = 0;
-  playerID: number = 0;
-  clicks: number = 0;
+  Location: number = 0;
+  PlayerID: number = 0;
+  Clicks: number = 0;
 }
 
 export class Hotspot {

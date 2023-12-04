@@ -267,115 +267,115 @@
 <div>
   <!-- General Content Properties -->
   <label>Language:</label>
-  <input [(ngModel)]="content.language" placeholder="Language" />
+  <input [(ngModel)]="content.Language" placeholder="Language" />
 
   <label>Producer:</label>
-  <input [(ngModel)]="content.producer" placeholder="Producer" />
+  <input [(ngModel)]="content.Producer" placeholder="Producer" />
 
   <label>Show:</label>
-  <input [(ngModel)]="content.show" placeholder="Show" />
+  <input [(ngModel)]="content.Show" placeholder="Show" />
 
   <label>Event:</label>
-  <input [(ngModel)]="content.event" placeholder="Event" />
+  <input [(ngModel)]="content.Event" placeholder="Event" />
 
   <label>Category:</label>
-  <input [(ngModel)]="content.category" placeholder="Category" />
+  <input [(ngModel)]="content.Category" placeholder="Category" />
 
   <label>Age Rating:</label>
-  <input [(ngModel)]="content.ageRating" placeholder="Age Rating" />
+  <input [(ngModel)]="content.AgeRating" placeholder="Age Rating" />
 
   <label>Season:</label>
-  <input [(ngModel)]="content.season" placeholder="Season" />
+  <input [(ngModel)]="content.Season" placeholder="Season" />
 
   <label>Episode:</label>
-  <input [(ngModel)]="content.episode" placeholder="Episode" />
+  <input [(ngModel)]="content.Episode" placeholder="Episode" />
 
   <label>Title:</label>
-  <input [(ngModel)]="content.title" placeholder="Title" />
+  <input [(ngModel)]="content.Title" placeholder="Title" />
 
   <label>Intro:</label>
-  <input [(ngModel)]="content.intro" placeholder="Intro" />
+  <input [(ngModel)]="content.Intro" placeholder="Intro" />
 
   <label>Featured:</label>
-  <input type="checkbox" [(ngModel)]="content.featured" />
+  <input type="checkbox" [(ngModel)]="content.Featured" />
 
   <label>Thumbnail:</label>
-  <input [(ngModel)]="content.thumbnail" placeholder="Thumbnail" />
+  <input [(ngModel)]="content.Thumbnail" placeholder="Thumbnail" />
 
   <label>Region:</label>
-  <input [(ngModel)]="content.region" placeholder="Region" />
+  <input [(ngModel)]="content.Region" placeholder="Region" />
 
   <label>Poster:</label>
-  <input [(ngModel)]="content.poster" placeholder="Poster" />
+  <input [(ngModel)]="content.Poster" placeholder="Poster" />
 
   <label>Weblink:</label>
-  <input [(ngModel)]="content.weblink" placeholder="Weblink" />
+  <input [(ngModel)]="content.Weblink" placeholder="Weblink" />
 
   <label>Is Live:</label>
-  <input type="checkbox" [(ngModel)]="content.isLive" />
+  <input type="checkbox" [(ngModel)]="content.IsLive" />
 
   <label>Date Published:</label>
-  <input [(ngModel)]="content.datePublished" placeholder="Date Published" />
+  <input [(ngModel)]="content.DatePublished" placeholder="Date Published" />
 
   <label>Authors List:</label>
-  <input [(ngModel)]="content.authorsList" placeholder="Authors List" />
+  <input [(ngModel)]="content.AuthorsList" placeholder="Authors List" />
 
   <label>Archive Date:</label>
-  <input [(ngModel)]="content.archiveDate" placeholder="Archive Date" />
+  <input [(ngModel)]="content.ArchiveDate" placeholder="Archive Date" />
 
   <label>Total Views:</label>
-  <input [(ngModel)]="content.totalViews" placeholder="Total Views" />
+  <input [(ngModel)]="content.TotalViews" placeholder="Total Views" />
 
   <label>Keywords:</label>
-  <input [(ngModel)]="content.keywords" placeholder="Keywords" />
+  <input [(ngModel)]="content.Keywords" placeholder="Keywords" />
 
   <!-- Celeb -->
   <label>Celeb ID:</label>
-  <input [(ngModel)]="celeb.id" placeholder="Celeb ID" />
+  <input [(ngModel)]="celeb.Id" placeholder="Celeb ID" />
 
   <label>Celeb Name:</label>
-  <input [(ngModel)]="celeb.name" placeholder="Celeb Name" />
+  <input [(ngModel)]="celeb.Name" placeholder="Celeb Name" />
 
   <label>Celeb Content Intro:</label>
-  <input [(ngModel)]="celeb.contentIntro" placeholder="Celeb Content Intro" />
+  <input [(ngModel)]="celeb.ContentIntro" placeholder="Celeb Content Intro" />
 
   <label>Celeb Current Rating:</label>
-  <input [(ngModel)]="celeb.currentRating" placeholder="Celeb Current Rating" />
+  <input [(ngModel)]="celeb.CurrentRating" placeholder="Celeb Current Rating" />
 
   <label>Celeb Thumbnail:</label>
-  <input [(ngModel)]="celeb.thumbnail" placeholder="Celeb Thumbnail" />
+  <input [(ngModel)]="celeb.Thumbnail" placeholder="Celeb Thumbnail" />
 
   <label>Celeb Total Clicks:</label>
-  <input [(ngModel)]="celeb.totalClicks" placeholder="Celeb Total Clicks" />
+  <input [(ngModel)]="celeb.TotalClicks" placeholder="Celeb Total Clicks" />
 
   <!-- Survey -->
   <label>Survey Title:</label>
-  <input [(ngModel)]="survey.title" placeholder="Survey Title" />
+  <input [(ngModel)]="survey.Title" placeholder="Survey Title" />
 
   <label>Survey Total Responses:</label>
-  <input [(ngModel)]="survey.totalResponses" placeholder="Survey Total Responses" />
+  <input [(ngModel)]="survey.TotalResponses" placeholder="Survey Total Responses" />
 
   <!-- Survey Choices (Assuming you want to display them) -->
-  <div *ngFor="let choice of survey.choiceList">
-    <label>Survey Choice Title:</label>
-    <input [(ngModel)]="choice.title" placeholder="Survey Choice Title" />
+<div *ngFor="let choice of survey.ChoiceList">
+  <label>Survey Choice Title:</label>
+  <input [(ngModel)]="choice.Title" placeholder="Survey Choice Title" />
 
-    <label>Survey Choice Description:</label>
-    <input [(ngModel)]="choice.description" placeholder="Survey Choice Description" />
+  <label>Survey Choice Description:</label>
+  <input [(ngModel)]="choice.Description" placeholder="Survey Choice Description" />
 
-    <label>Survey Choice Response Size:</label>
-    <input [(ngModel)]="choice.responseSize" placeholder="Survey Choice Response Size" />
-  </div>
+  <label>Survey Choice Response Size:</label>
+  <input [(ngModel)]="choice.ResponseSize" placeholder="Survey Choice Response Size" />
+</div>
 
   <!-- Player Entry -->
   <label>Player Location:</label>
-  <input [(ngModel)]="playerEntry.location" placeholder="Player Location" />
+  <input [(ngModel)]="playerEntry.Location" placeholder="Player Location" />
 
   <label>Player ID:</label>
-  <input [(ngModel)]="playerEntry.playerID" placeholder="Player ID" />
+  <input [(ngModel)]="playerEntry.PlayerID" placeholder="Player ID" />
 
   <label>Player Clicks:</label>
-  <input [(ngModel)]="playerEntry.clicks" placeholder="Player Clicks" />
+  <input [(ngModel)]="playerEntry.Clicks" placeholder="Player Clicks" />
 
   <!-- Hotspot -->
   <label>Hotspot Location:</label>
@@ -433,6 +433,26 @@
 
   <!-- Add input fields for other content properties -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
   <button (click)="submitContent()">Submit</button>
 </div>
 
@@ -442,7 +462,232 @@
 
 
 
+<table *ngIf="contentList && contentList.length > 0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Language</th>
+      <th>Producer</th>
+      <th>Show</th>
+      <th>Event</th>
+      <th>Category</th>
+      <th>Age Rating</th>
+      <th>Season</th>
+      <th>Episode</th>
+      <th>Title</th>
+      <th>Intro</th>
+      <th>Featured</th>
+      <th>Thumbnail</th>
+      <th>Region</th>
+      <th>Poster</th>
+      <th>Weblink</th>
+      <th>Is Live</th>
+      <th>Date Published</th>
+      <th>Authors List</th>
+      <th>Archive Date</th>
+      <th>Total Views</th>
+      <th>Keywords</th>
+      <th>Celeb ID</th>
+      <th>Celeb Name</th>
+      <th>Celeb Content Intro</th>
+      <th>Celeb Current Rating</th>
+      <th>Celeb Thumbnail</th>
+      <th>Celeb Total Clicks</th>
+      <th>Survey Title</th>
+      <th>Survey Total Responses</th>
+      <th>Survey Choice Title</th>
+      <th>Survey Choice Description</th>
+      <th>Survey Choice Response Size</th>
+      <th>Player Location</th>
+      <th>Player ID</th>
+      <th>Player Clicks</th>
+      <th>Hotspot Location</th>
+      <th>Hotspot Image URL</th>
+      <th>Hotspot Clicks</th>
+      <th>Hotspot Tooltip</th>
+      <th>Advertisement Start Location</th>
+      <th>Advertisement End Location</th>
+      <th>Advertisement Type</th>
+      <th>Advertisement Total Skips</th>
+      <th>Overlay Location</th>
+      <th>Overlay Type</th>
+      <th>Overlay Title</th>
+      <th>Overlay Choice Title</th>
+      <th>Overlay Choice Total Responses</th>
+      <th>Overlay Pause Video</th>
+      <th>Overlay Display Timeout</th>
+      <th>Overlay Optional</th>
+      <!-- Add other header columns as needed -->
+      <!-- Include columns for Celeb, Survey, PlayerEntry, Hotspot, Advertisement, Overlay properties as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of contentList" class="bg-yellow-400 border-2 border-black">
+      <td>{{ item.Id }}</td>
+      <td class="border-2 border-black">{{ item.Language }}</td>
+      <td class="border-2 border-black">{{ item.Producer }}</td>
+      <td class="border-2 border-black">{{ item.Show }}</td>
+      <td class="border-2 border-black">{{ item.Event }}</td>
+      <td class="border-2 border-black">{{ item.Category }}</td>
+      <td class="border-2 border-black">{{ item.AgeRating }}</td>
+      <td class="border-2 border-black">{{ item.Season }}</td>
+      <td class="border-2 border-black">{{ item.Episode }}</td>
+      <td class="border-2 border-black">{{ item.Title }}</td>
+      <td class="border-2 border-black">{{ item.Intro }}</td>
+      <td class="border-2 border-black">{{ item.Featured }}</td>
+      <td class="border-2 border-black">{{ item.Thumbnail }}</td>
+      <td class="border-2 border-black">{{ item.Region }}</td>
+      <td class="border-2 border-black">{{ item.Poster }}</td>
+      <td class="border-2 border-black">{{ item.Weblink }}</td>
+      <td class="border-2 border-black">{{ item.IsLive }}</td>
+      <td class="border-2 border-black">{{ item.DatePublished }}</td>
+      <td class="border-2 border-black">{{ item.AuthorsList }}</td>
+      <td class="border-2 border-black">{{ item.ArchiveDate }}</td>
+      <td class="border-2 border-black">{{ item.TotalViews }}</td>
+      <td class="border-2 border-black">{{ item.Keywords }}</td>
 
+  
+    
+      <!-- New columns for Celeb properties -->
+      <ng-container *ngIf="item.CelebList && item.CelebList.length > 0">
+        <ng-container *ngFor="let celeb of item.CelebList">
+          <td class="border-2 border-black">{{ celeb.Id }}</td>
+          <td class="border-2 border-black">{{ celeb.Name }}</td>
+          <td class="border-2 border-black">{{ celeb.ContentIntro }}</td>
+          <td class="border-2 border-black">{{ celeb.CurrentRating }}</td>
+          <td class="border-2 border-black">{{ celeb.Thumbnail }}</td>
+          <td class="border-2 border-black">{{ celeb.TotalClicks }}</td>
+        </ng-container>
+      </ng-container>
+
+      
+
+
+
+      <ng-container *ngIf="item.Survey && item.Survey.length > 0">
+        <ng-container *ngFor="let survey of item.Survey">
+          <td class="border-2 border-black">{{ survey.Title }}</td>
+          <td class="border-2 border-black">{{ survey.TotalResponses }}</td>
+      
+          <!-- Iterate over ChoiceList property inside Survey -->
+          <ng-container *ngIf="survey.ChoiceList && survey.ChoiceList.length > 0">
+            <ng-container *ngFor="let choice of survey.ChoiceList">
+              <td>{{ choice.Title }}</td>
+              <td>{{ choice.Description }}</td>
+              <td>{{ choice.ResponseSize }}</td>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+      
+      
+     
+
+
+
+      <!-- <ng-container *ngIf="item.PlayerEntryList && item.PlayerEntryList.length > 0">
+        <ng-container *ngFor="let playerEntry of item.PlayerEntryList">
+          <td class="border-2 border-black">{{ playerEntry.Location }}</td>
+          <td class="border-2 border-black">{{ playerEntry.PlayerID }}</td>
+          <td class="border-2 border-black">{{ playerEntry.Clicks }}</td>
+        </ng-container>
+      </ng-container> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <!-- <ng-container *ngIf="item.Survey && item.Survey.length > 0">
+        <ng-container *ngFor="let survey of item.Survey">
+          <td class="border-2 border-black">{{ survey.Title }}</td>
+          <td class="border-2 border-black">{{ survey.TotalResponses }}</td>          
+        </ng-container>
+      </ng-container>
+
+
+
+      <ng-container *ngIf="item.SurveyChoice && item.SurveyChoice.length > 0">
+        <ng-container *ngFor="let choice of item.SurveyChoice">
+          <td>{{ choice.Title }}</td>
+          <td>{{ choice.Description }}</td>
+          <td>{{ choice.ResponseSize }}</td>
+        </ng-container>
+      </ng-container> -->
+
+
+
+   
+
+
+      
+     <!-- <td>{{ item..id }}</td> -->
+      <!-- <td>{{ item.CelebName }}</td>
+      <td>{{ item.CelebContentIntro }}</td>
+      <td>{{ item.CelebCurrentRating }}</td>
+      <td>{{ item.CelebThumbnail }}</td>
+      <td>{{ item.CelebTotalClicks }}</td> -->
+      
+      <!-- Survey -->
+      <!-- <td>{{ item.SurveyTitle }}</td>
+      <td>{{ item.SurveyTotalResponses }}</td> -->
+      
+      <!-- Survey Choices -->
+      <!-- <div *ngFor="let choice of item.SurveyChoiceList">
+        <td>{{ choice.Title }}</td>
+        <td>{{ choice.Description }}</td>
+        <td>{{ choice.ResponseSize }}</td>
+      </div> -->
+      
+      <!-- Player Entry -->
+      <!-- <td>{{ item.PlayerLocation }}</td>
+      <td>{{ item.PlayerID }}</td>
+      <td>{{ item.PlayerClicks }}</td> -->
+      
+      <!-- Hotspot -->
+      <!-- <td>{{ item.HotspotLocation }}</td>
+      <td>{{ item.HotspotImageURL }}</td>
+      <td>{{ item.HotspotClicks }}</td>
+      <td>{{ item.HotspotTooltip }}</td> -->
+      
+      <!-- Advertisement -->
+      <!-- <td>{{ item.AdvertisementStartLocation }}</td>
+      <td>{{ item.AdvertisementEndLocation }}</td>
+      <td>{{ item.AdvertisementType }}</td>
+      <td>{{ item.AdvertisementTotalSkips }}</td> -->
+      
+      <!-- Overlay -->
+      <!-- <td>{{ item.OverlayLocation }}</td>
+      <td>{{ item.OverlayType }}</td>
+      <td>{{ item.OverlayTitle }}</td> -->
+      
+      <!-- Overlay Choices -->
+      <!-- <div *ngFor="let choice of item.OverlayChoiceList">
+        <td>{{ choice.Title }}</td>
+        <td>{{ choice.TotalResponses }}</td>
+      </div>
+      
+      <td>{{ item.OverlayPauseVideo }}</td>
+      <td>{{ item.OverlayDisplayTimeout }}</td>
+      <td>{{ item.OverlayOptional }}</td> -->
+
+      
+      <!-- Include cells for other fields from the Content class as needed -->
+      <!-- Include cells for Celeb, Survey, PlayerEntry, Hotspot, Advertisement, Overlay properties as needed -->
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -457,24 +702,3 @@
 <!-- Change occurrences of content.surveyList to content.survey -->
 
 <!-- ... Previous code ... -->
-
-<div *ngIf="content.survey && content.survey.length > 0">
-  <h3>Survey Details</h3>
-  <div *ngFor="let survey of content.survey">
-    <label>Survey Title:</label>
-    <div>{{ survey.title }}</div>
-
-    <!-- Continue displaying other survey properties as needed -->
-
-    <!-- Display Survey Choices if applicable -->
-    <div *ngIf="survey.choiceList && survey.choiceList.length > 0">
-      <h4>Survey Choices</h4>
-      <div *ngFor="let choice of survey.choiceList">
-        <label>Survey Choice Title:</label>
-        <div>{{ choice.title }}</div>
-
-        <!-- Continue displaying other choice properties as needed -->
-      </div>
-    </div>
-  </div>
-</div>
