@@ -63,27 +63,27 @@ export class PlayerEntry {
 }
 
 export class Hotspot {
-  location: number = 0;
-  imageURL: string = '';
-  clicks: number = 0;
-  tooltip: string = '';
+  Location: number = 0;
+  ImageURL: string = '';
+  Clicks: number = 0;
+  Tooltip: string = '';
 }
 
 export class Advertisement {
-  startLocation: number = 0;
-  endLocation: number = 0;
-  type: string = '';
-  totalSkips: number = 0;
+  StartLocation: number = 0;
+  EndLocation: number = 0;
+  Type: string = '';
+  TotalSkips: number = 0;
 }
 
 export class Overlay {
-  location: number = 0;
-  type: string = '';
-  title: string = '';
-  choiceList: OverlayChoice[] = [];
-  pauseVideo: boolean = false;
-  displayTimeout: string = '';
-  optional: boolean = false;
+  Location: number = 0;
+  Type: string = '';
+  Title: string = '';
+  ChoiceList: OverlayChoice[] = [];
+  PauseVideo: boolean = false;
+  DisplayTimeout: string = '';
+  Optional: boolean = false;
 }
 
 export class OverlayChoice {
