@@ -69,7 +69,6 @@
             <th class="py-2 px-4">Name</th>
             <th class="py-2 px-4">Email</th>
             <th class="py-2 px-4">Phone</th>
-            <th class="py-2 px-4"></th>
           </tr>
         </thead>
         <tbody>
@@ -77,9 +76,7 @@
             <td (click)="onSelectUser(user)" class="cursor-pointer py-2 px-4">{{ user.Name }}</td>
             <td (click)="onSelectUser(user)" class="cursor-pointer py-2 px-4">{{ user.Email }}</td>
             <td (click)="onSelectUser(user)" class="cursor-pointer py-2 px-4">{{ user.Phone }}</td>
-            <td class="py-2 px-4">
-              <button (click)="onDeleteUser(user.Id)" class="text-red-500">Delete</button>
-            </td>
+
           </tr>
         </tbody>
       </table>
@@ -127,7 +124,7 @@
       <div class="overflow-x-scroll">
       <table class="bg-white min-w-full border border-gray-300 mt-4 mb-6">
         <thead>
-          <tr>
+          <tr class="bg-gray-200">
             <th class="py-2 px-4 border-b text-center">Name</th>
             <th class="py-2 px-4 border-b text-center">Intro</th>
             <th class="py-2 px-4 border-b text-center">Thumbnail</th>
@@ -136,12 +133,10 @@
             <th class="py-2 px-4 border-b text-center">Handle</th>
             <th class="py-2 px-4 border-b text-center">Type</th>
             <th class="py-2 px-4 border-b text-center">ShowsList</th>
-            <!-- Add similar columns for other properties of the Producer model -->
-            <th class="py-2 px-4 border-b text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let producer of producers">
+          <tr *ngFor="let producer of producers" class="bg-gray-100">
             <td class="py-2 px-4 border-b text-center">{{ producer.Name }}</td>
             <td class="py-2 px-4 border-b text-center">{{ producer.Intro }}</td>
             <td class="py-2 px-4 border-b text-center">{{ producer.Thumbnail }}</td>
@@ -150,11 +145,6 @@
             <td class="py-2 px-4 border-b text-center">{{ producer.Handle }}</td>
             <td class="py-2 px-4 border-b text-center">{{ producer.Type.join(', ') }}</td>
             <td class="py-2 px-4 border-b text-center">{{ producer.ShowsList.join(', ') }}</td>
-            <!-- Add similar columns for other properties of the Producer model -->
-            <td class="py-2 px-4 border-b text-center">
-              <button (click)="selectProducer(producer)" class="text-blue-500 hover:underline">Edit</button>
-              <button (click)="deleteProducer(producer.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
-            </td>
           </tr>
         </tbody>
       </table>
@@ -198,7 +188,7 @@
       <div class="overflow-x-scroll">
       <table class="bg-white min-w-full border border-gray-300 mt-4 mb-6">
         <thead>
-          <tr>
+          <tr class="bg-gray-200">
             <th class="py-2 px-4 border-b text-center">Name</th>
             <th class="py-2 px-4 border-b text-center">Intro</th>
             <th class="py-2 px-4 border-b text-center">Thumbnail</th>
@@ -206,12 +196,10 @@
             <th class="py-2 px-4 border-b text-center">Weblink</th>
             <th class="py-2 px-4 border-b text-center">Handle</th>
             <th class="py-2 px-4 border-b text-center">Type</th>
-            <!-- Add similar columns for other properties of the Producer model -->
-            <th class="py-2 px-4 border-b text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let celeb of celebs">
+          <tr *ngFor="let celeb of celebs" class="bg-gray-100">
             <td class="py-2 px-4 border-b text-center">{{ celeb.Name }}</td>
             <td class="py-2 px-4 border-b text-center">{{ celeb.Intro }}</td>
             <td class="py-2 px-4 border-b text-center">{{ celeb.Thumbnail }}</td>
@@ -219,11 +207,6 @@
             <td class="py-2 px-4 border-b text-center">{{ celeb.Weblink }}</td>
             <td class="py-2 px-4 border-b text-center">{{ celeb.Handle }}</td>
             <td class="py-2 px-4 border-b text-center">{{ celeb.Type.join(', ') }}</td>
-            <!-- Add similar columns for other properties of the Producer model -->
-            <td class="py-2 px-4 border-b text-center">
-              <button (click)="selectCelebs(celeb)" class="text-blue-500 hover:underline">Edit</button>
-              <button (click)="deleteCelebs(celeb.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
-            </td>
           </tr>
         </tbody>
       </table>
@@ -258,29 +241,22 @@
       </details>
 
       <h3 class="text-xl text-red-700 font-bold">Event Data View:</h3>
-      <div class="overflow-x-scroll">
+      <div>
       <table class="bg-white min-w-full border border-gray-300 mt-4 mb-6">
         <thead>
-          <tr>
+          <tr class="bg-gray-200">
             <th class="py-2 px-4 border-b text-center">Name</th>
             <th class="py-2 px-4 border-b text-center">Thumbnail</th>
             <th class="py-2 px-4 border-b text-center">Trending</th>
             <th class="py-2 px-4 border-b text-center">Date</th>
-            <!-- Add similar columns for other properties of the Producer model -->
-            <th class="py-2 px-4 border-b text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let event of events">
+          <tr *ngFor="let event of events" class="bg-gray-100">
             <td class="py-2 px-4 border-b text-center">{{ event.Name }}</td>
             <td class="py-2 px-4 border-b text-center">{{ event.Thumbnail }}</td>
             <td class="py-2 px-4 border-b text-center">{{ event.Trending }}</td>
             <td class="py-2 px-4 border-b text-center">{{ event.Date }}</td>
-            <!-- Add similar columns for other properties of the Producer model -->
-            <td class="py-2 px-4 border-b text-center">
-              <button (click)="selectEvent(event)" class="text-blue-500 hover:underline">Edit</button>
-              <button (click)="deleteEvent(event.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
-            </td>
           </tr>
         </tbody>
       </table>
@@ -320,29 +296,24 @@
           </form>
       </details>
       <h3 class="text-xl text-red-700 font-bold">Poll Data View:</h3>
-      <div class="overflow-x-scroll">
+      <div>
       <table class="min-w-full bg-white border border-gray-300 mt-4 mb-6">
         <thead>
-          <tr>
+          <tr class="bg-gray-200">
             <th class="py-2 px-4 border-b text-left">Event</th>
             <th class="py-2 px-4 border-b text-left">Producer</th>
             <th class="py-2 px-4 border-b text-left">Date</th>
             <th class="py-2 px-4 border-b text-left">Survey Item</th>
             <th class="py-2 px-4 border-b text-left">Survey Value</th>
-            <th class="py-2 px-4 border-b text-left">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let poll of polls">
+          <tr *ngFor="let poll of polls" class="bg-gray-100">
             <td class="py-2 px-4 border-b">{{ poll.Event }}</td>
             <td class="py-2 px-4 border-b">{{ poll.Producer }}</td>
             <td class="py-2 px-4 border-b">{{ poll.Date }}</td>
             <td class="py-2 px-4 border-b">{{ poll.SurveyDataList.Item }}</td>
             <td class="py-2 px-4 border-b">{{ poll.SurveyDataList.Value }}</td>
-            <td class="py-2 px-4 border-b">
-              <button (click)="onSelectPoll(poll)" class="text-blue-500 hover:underline">Edit</button>
-              <button (click)="onDeletePoll(poll.id)" class="ml-2 text-red-500 hover:underline">Delete</button>
-            </td>
           </tr>
         </tbody>
       </table>
@@ -592,7 +563,7 @@
       <div class="overflow-x-scroll">
       <table *ngIf="contentList && contentList.length > 0">
         <thead>
-          <tr>
+          <tr class="bg-gray-200">
             <th>ID</th>
             <th>Language</th>
             <th>Producer</th>
@@ -650,7 +621,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of contentList" class="bg-yellow-400 border-2 border-black">
+          <tr *ngFor="let item of contentList" class="bg-gray-100 border-2 border-black">
             <td>{{ item.Id }}</td>
             <td class="border-2 border-black">{{ item.Language }}</td>
             <td class="border-2 border-black">{{ item.Producer }}</td>
