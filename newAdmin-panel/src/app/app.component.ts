@@ -1,8 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { Content, Celeb, Survey, SurveyChoice, PlayerEntry, Hotspot, Advertisement, Overlay, OverlayChoice } from './content.model';
-// import { ContentService } from './content.service';
-
 import { Component, OnInit } from '@angular/core';
 import { Content, Celeb, Survey, PlayerEntry, Hotspot, Advertisement, Overlay, SurveyChoice, OverlayChoice } from './content.model';
 import { ContentService } from './content.service';
@@ -18,8 +13,7 @@ export class AppComponent implements OnInit {
 
   contentList: Content[] = [];
 
-  content: Content = new Content(); // Initialize with default values or empty objects
-  // Add additional lists if needed
+  content: Content = new Content();
   celeb: Celeb = new Celeb();
   surveyChoice: SurveyChoice =new SurveyChoice();
   survey: Survey = new Survey();
@@ -35,17 +29,6 @@ export class AppComponent implements OnInit {
     this.fetchContent();
   }
 
-  // fetchContent(): void {
-  //   this.contentService.getAllContent().subscribe(
-  //     (contentList) => {
-  //       this.contentList = contentList;
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching content:', error);
-  //     }
-  //   );
-  // }
-
 
   fetchContent(): void {
     this.contentService.getAllContent().subscribe(
@@ -60,7 +43,6 @@ export class AppComponent implements OnInit {
   }
 
   submitContent(): void {
-    // Add the current celeb, survey, etc. to the content object before submitting
     this.content.CelebList.push(this.celeb);
     this.content.SurveyChoice.push(this.surveyChoice)
     this.content.Survey.push(this.survey);
@@ -69,14 +51,13 @@ export class AppComponent implements OnInit {
     this.content.Advertisements.push(this.advertisement);
     this.content.OverlayChoice.push(this.overlayChoice)
     this.content.Overlays.push(this.overlay);
-    
+
     this.survey.addChoice(this.surveyChoice)
     this.overlay.addChoice(this.overlayChoice)
 
     this.contentService.createContent(this.content).subscribe(
       (createdContent) => {
         console.log('Content created successfully:', createdContent);
-        // Clear input fields or reset the form
         this.clearForm();
       },
       (error) => {
@@ -86,7 +67,6 @@ export class AppComponent implements OnInit {
   }
 
   clearForm(): void {
-    // Reset all input fields to their initial values
     this.content = new Content();
     this.celeb = new Celeb();
     this.surveyChoice = new SurveyChoice()

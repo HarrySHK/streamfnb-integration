@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OMAKWQspqGppbZi4Bh6chfmIGU4vVOKF7XH89+v857fyQtXtRZe07ZNewxDwtKz5ByQYl0yfUYKjWJH95sMSXQ==",
+  "dgSpecHash": "QXEkHSj/ByuE/FyVh/c6dmR76pNm/JcP5zdXfJerff4NnnmNtESKAHD48SpwXF+iu2RsA0RXcgsCY27Cd0KgkQ==",
   "success": true,
-  "projectFilePath": "D:\\streamvid-final\\streamfnb-integration\\Backend\\streamapi.csproj",
+  "projectFilePath": "D:\\streamvid-pakka-final\\streamfnb-integration\\Backend\\streamapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
