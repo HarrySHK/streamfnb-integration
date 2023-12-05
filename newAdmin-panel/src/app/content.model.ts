@@ -28,7 +28,8 @@ export class Content {
   Hotspots: Hotspot[] = [];
   Advertisements: Advertisement[] = [];
   Overlays: Overlay[] = [];
-SurveyChoice:SurveyChoice[]=[];
+  SurveyChoice:SurveyChoice[]=[];
+  OverlayChoice:OverlayChoice[]=[];
 
 }
 
@@ -46,8 +47,9 @@ export class Survey {
   Title: string = '';
   TotalResponses: number = 0;
   ChoiceList: SurveyChoice[] = [];
-
-  
+  addChoice(choice: SurveyChoice) {
+    this.ChoiceList.push(choice);
+  }
 }
 
 export class SurveyChoice {
@@ -84,9 +86,12 @@ export class Overlay {
   PauseVideo: boolean = false;
   DisplayTimeout: string = '';
   Optional: boolean = false;
+  addChoice(choice: OverlayChoice) {
+    this.ChoiceList.push(choice);
+  }
 }
 
 export class OverlayChoice {
-  title: string = '';
-  totalResponses: number = 0;
+  Title: string = '';
+  TotalResponses: number = 0;
 }

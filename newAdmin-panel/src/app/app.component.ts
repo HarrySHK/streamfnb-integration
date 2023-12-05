@@ -4,7 +4,7 @@
 // import { ContentService } from './content.service';
 
 import { Component, OnInit } from '@angular/core';
-import { Content, Celeb, Survey, PlayerEntry, Hotspot, Advertisement, Overlay } from './content.model';
+import { Content, Celeb, Survey, PlayerEntry, Hotspot, Advertisement, Overlay, SurveyChoice, OverlayChoice } from './content.model';
 import { ContentService } from './content.service';
 
 
@@ -21,11 +21,13 @@ export class AppComponent implements OnInit {
   content: Content = new Content(); // Initialize with default values or empty objects
   // Add additional lists if needed
   celeb: Celeb = new Celeb();
+  surveyChoice: SurveyChoice =new SurveyChoice();
   survey: Survey = new Survey();
   playerEntry: PlayerEntry = new PlayerEntry();
   hotspot: Hotspot = new Hotspot();
   advertisement: Advertisement = new Advertisement();
   overlay: Overlay = new Overlay();
+  overlayChoice: OverlayChoice = new OverlayChoice();
 
   constructor(private contentService: ContentService) {}
 
@@ -60,11 +62,16 @@ export class AppComponent implements OnInit {
   submitContent(): void {
     // Add the current celeb, survey, etc. to the content object before submitting
     this.content.CelebList.push(this.celeb);
+    this.content.SurveyChoice.push(this.surveyChoice)
     this.content.Survey.push(this.survey);
     this.content.PlayerEntryList.push(this.playerEntry);
     this.content.Hotspots.push(this.hotspot);
     this.content.Advertisements.push(this.advertisement);
+    this.content.OverlayChoice.push(this.overlayChoice)
     this.content.Overlays.push(this.overlay);
+    
+    this.survey.addChoice(this.surveyChoice)
+    this.overlay.addChoice(this.overlayChoice)
 
     this.contentService.createContent(this.content).subscribe(
       (createdContent) => {
@@ -82,6 +89,7 @@ export class AppComponent implements OnInit {
     // Reset all input fields to their initial values
     this.content = new Content();
     this.celeb = new Celeb();
+    this.surveyChoice = new SurveyChoice()
     this.survey = new Survey();
     this.playerEntry = new PlayerEntry();
     this.hotspot = new Hotspot();
