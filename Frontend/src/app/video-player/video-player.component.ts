@@ -94,12 +94,6 @@ export class VideoPlayerComponent implements OnInit {
 
   video!: string;
   title!: string;
-  image!: string;
-   desc!: string;
-  prof1!: string;
-  prof2!: string;
-  prof3!: string;
-  prof4!: string;
 
   // ==================
 
@@ -116,14 +110,8 @@ export class VideoPlayerComponent implements OnInit {
 
   loadTrending(id: string) {
     this.movieService.getTrendingbyId(id).subscribe((data: any) => {
-      this.video = data.Video;
-      this.title = data.title;
-      this.image = data.image;
-      this.desc = data.description;
-      this.prof1 = data.profile1;
-      this.prof2 = data.profile2;
-      this.prof3 = data.profile3;
-      this.prof4 = data.profile4;
+      this.video = data.Weblink;
+      this.title = data.Name;
     });
     this.movieService.getTrending().subscribe((data: any) => {
       this.trending = data;
@@ -131,14 +119,8 @@ export class VideoPlayerComponent implements OnInit {
   }
   loadRecommended(id: string) {
     this.movieService.getRecommendedbyId(id).subscribe((data: any) => {
-      this.video = data.Video;
-      this.title = data.title;
-      this.image = data.image;
-      this.desc = data.description;
-      this.prof1 = data.profile1;
-      this.prof2 = data.profile2;
-      this.prof3 = data.profile3;
-      this.prof4 = data.profile4;
+      this.video = data.Weblink;
+      this.title = data.Title;
     });
     this.movieService.getRecommended().subscribe((data: any) => {
       this.recommended = data;

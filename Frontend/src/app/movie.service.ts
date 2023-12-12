@@ -12,17 +12,17 @@ export class MovieService {
   constructor(private http: HttpClient) {}
 
   getTrending() {
-    return this.http.get(`${this.apiUrl}/trending`);
+    return this.http.get(`${this.apiUrl}/producer`);
   }
 
   getTrendingbyId(id: string) {
-    return this.http.get(`${this.apiUrl}/trending/${id}`);
+    return this.http.get(`${this.apiUrl}/producer/${id}`);
   }
   getRecommended() {
-    return this.http.get(`${this.apiUrl}/recommended`);
+    return this.http.get(`${this.apiUrl}/content`);
   }
 
   getRecommendedbyId(id: string) {
-    return this.http.get(`${this.apiUrl}/recommended/${id}`);
+    return this.http.get(`${this.apiUrl}/content/${id}`);
   }
 }
