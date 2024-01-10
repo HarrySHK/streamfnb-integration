@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\streamvid-pakka-final\\streamfnb-integration\\Backend\\streamapi.csproj": {}
+    "D:\\streamvid-ekor\\streamfnb-integration\\Backend\\streamapi.csproj": {}
   },
   "projects": {
-    "D:\\streamvid-pakka-final\\streamfnb-integration\\Backend\\streamapi.csproj": {
+    "D:\\streamvid-ekor\\streamfnb-integration\\Backend\\streamapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\streamvid-pakka-final\\streamfnb-integration\\Backend\\streamapi.csproj",
+        "projectUniqueName": "D:\\streamvid-ekor\\streamfnb-integration\\Backend\\streamapi.csproj",
         "projectName": "streamapi",
-        "projectPath": "D:\\streamvid-pakka-final\\streamfnb-integration\\Backend\\streamapi.csproj",
+        "projectPath": "D:\\streamvid-ekor\\streamfnb-integration\\Backend\\streamapi.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\streamvid-pakka-final\\streamfnb-integration\\Backend\\obj\\",
+        "outputPath": "D:\\streamvid-ekor\\streamfnb-integration\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
